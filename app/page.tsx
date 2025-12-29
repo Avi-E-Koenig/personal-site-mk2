@@ -26,18 +26,30 @@ export default async function Home() {
             {t('snapshot.title')}
           </h2>
           <div className="space-y-4">
-            <p className="text-base text-text-secondary">
-              {t('snapshot.item1')}
-            </p>
-            <p className="text-base text-text-secondary">
-              {t('snapshot.item2')}
-            </p>
-            <p className="text-base text-text-secondary">
-              {t('snapshot.item3')}
-            </p>
-            <p className="text-base text-text-secondary">
-              {t('snapshot.item4')}
-            </p>
+            {[
+              { key: 'snapshot.item1', splitAt: '(' },
+              { key: 'snapshot.item2', splitAt: ':' },
+              { key: 'snapshot.item3', splitAt: ':' },
+              { key: 'snapshot.item4', splitAt: ':' },
+            ].map((item, idx) => {
+              const text = t(item.key)
+              const splitIndex = text.indexOf(item.splitAt)
+              if (splitIndex === -1) {
+                return (
+                  <p key={idx} className="text-base text-text-secondary">
+                    {text}
+                  </p>
+                )
+              }
+              const category = text.substring(0, splitIndex + (item.splitAt === ':' ? 1 : 0)).trim()
+              const content = text.substring(splitIndex + (item.splitAt === ':' ? 1 : 0)).trim()
+              return (
+                <p key={idx} className="text-base text-text-secondary">
+                  <span className="font-medium text-text-primary">{category}</span>{' '}
+                  <span>{content}</span>
+                </p>
+              )
+            })}
           </div>
         </section>
 
@@ -74,6 +86,16 @@ export default async function Home() {
             <Link href="/contact" className="btn-secondary">
               {t('cta.contact')}
             </Link>
+          </div>
+          <div className="mt-4">
+            <a
+              href="https://www.linkedin.com/in/avi-koenig/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base text-text-secondary hover:text-text-primary transition-colors"
+            >
+              {t('cta.linkedin')}
+            </a>
           </div>
         </section>
       </div>

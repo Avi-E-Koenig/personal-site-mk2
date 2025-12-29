@@ -17,7 +17,7 @@ const config: Config = {
         text: {
           primary: '#1A1A1A',
           secondary: '#4A4A4A',
-          muted: '#6B6B6B',
+          muted: '#5A5A5A', // Darkened from #6B6B6B to #5A5A5A for better WCAG contrast (4.5:1 on #FAFAFA)
           inverse: '#FFFFFF',
         },
         border: {

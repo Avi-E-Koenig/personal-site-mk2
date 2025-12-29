@@ -10,7 +10,7 @@
     "hero": {
       "name": "Avi Koenig",
       "title": "Senior Backend-Oriented Full-Stack Developer",
-      "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and reliable delivery under real-world constraints."
+      "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints."
     },
     "snapshot": {
       "title": "Quick Snapshot",
@@ -27,13 +27,14 @@
     },
     "howIWork": {
       "title": "How I Work",
-      "item1": "Understand behavior before refactoring",
+      "item1": "Understand system behavior before refactoring",
       "item2": "Improve incrementally with safeguards (tests, documentation, controlled change)",
       "item3": "Balance technical quality with delivery constraints and long-term maintainability"
     },
     "cta": {
       "resume": "Resume (PDF)",
-      "contact": "Contact"
+      "contact": "Contact",
+      "linkedin": "LinkedIn"
     }
   },
   "howIWork": {
