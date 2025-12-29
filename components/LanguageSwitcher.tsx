@@ -15,19 +15,21 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex items-center space-x-2 rtl:space-x-reverse">
+    <div className="flex items-center gap-2 rtl:gap-reverse">
       {locales.map((loc) => (
         <button
           key={loc}
           onClick={() => handleLocaleChange(loc)}
           className={`
-            px-3 py-1 text-sm font-medium rounded-md transition-colors
+            px-4 py-2 text-sm font-medium rounded-md transition-colors
+            min-h-[44px] min-w-[44px]
             ${
               locale === loc
                 ? 'bg-accent-500 text-text-inverse'
                 : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
             }
           `}
+          aria-label={`Switch to ${loc === 'en' ? 'English' : 'Hebrew'}`}
         >
           {loc.toUpperCase()}
         </button>

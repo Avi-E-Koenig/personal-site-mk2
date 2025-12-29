@@ -7,7 +7,7 @@ export default async function Contact() {
     <div className="section">
       <div className="container-content">
         <header className="mb-section-normal">
-          <h1 className="text-h1 text-text-primary font-semibold mb-4">
+          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('title')}
           </h1>
           <p className="text-lg text-text-secondary">

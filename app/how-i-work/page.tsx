@@ -7,17 +7,17 @@ export default async function HowIWork() {
     <div className="section">
       <div className="container-content">
         <header className="mb-section-normal">
-          <h1 className="text-h1 text-text-primary font-semibold mb-4">
+          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('title')}
           </h1>
-          <p className="text-xl text-text-secondary">
+          <p className="text-lg sm:text-xl text-text-secondary">
             {t('subtitle')}
           </p>
         </header>
 
         <div className="space-y-section-tight">
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('understanding.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -29,7 +29,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('behavior.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -41,7 +41,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('refactoring.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -56,7 +56,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('ai.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -71,7 +71,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('constraints.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -89,7 +89,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('ownership.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -103,7 +103,7 @@ export default async function HowIWork() {
           </section>
 
           <section>
-            <h2 className="text-h2 text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
               {t('adapting.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed">

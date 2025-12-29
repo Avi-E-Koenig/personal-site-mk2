@@ -44,10 +44,14 @@ const config: Config = {
         mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
       fontSize: {
-        h1: ['2.5rem', { lineHeight: '1.2', fontWeight: '600' }],
-        h2: ['2rem', { lineHeight: '1.3', fontWeight: '600' }],
-        h3: ['1.5rem', { lineHeight: '1.4', fontWeight: '600' }],
-        h4: ['1.25rem', { lineHeight: '1.5', fontWeight: '600' }],
+        h1: ['1.875rem', { lineHeight: '1.2', fontWeight: '600' }], // 30px mobile
+        'h1-md': ['2.5rem', { lineHeight: '1.2', fontWeight: '600' }], // 40px desktop
+        h2: ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }], // 24px mobile
+        'h2-md': ['2rem', { lineHeight: '1.3', fontWeight: '600' }], // 32px desktop
+        h3: ['1.25rem', { lineHeight: '1.4', fontWeight: '600' }], // 20px mobile
+        'h3-md': ['1.5rem', { lineHeight: '1.4', fontWeight: '600' }], // 24px desktop
+        h4: ['1.125rem', { lineHeight: '1.5', fontWeight: '600' }], // 18px mobile
+        'h4-md': ['1.25rem', { lineHeight: '1.5', fontWeight: '600' }], // 20px desktop
       },
       maxWidth: {
         content: '48rem', // max-w-3xl

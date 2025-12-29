@@ -34,12 +34,14 @@
     @apply underline;
   }
 
-  /* Button styles */
+  /* Button styles - Mobile optimized */
   .btn-primary {
     @apply bg-accent-500 hover:bg-accent-600 text-text-inverse;
     @apply px-6 py-3 rounded-md font-medium;
     @apply transition-colors duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+    @apply min-h-[44px] min-w-[44px]; /* Touch target size */
+    @apply w-full sm:w-auto; /* Full width on mobile */
   }
 
   .btn-secondary {
@@ -47,24 +49,26 @@
     @apply px-6 py-3 rounded-md font-medium;
     @apply hover:bg-background-secondary transition-colors duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+    @apply min-h-[44px] min-w-[44px]; /* Touch target size */
+    @apply w-full sm:w-auto; /* Full width on mobile */
   }
 
-  /* Section wrapper */
+  /* Section wrapper - Responsive spacing */
   .section {
-    @apply py-section-normal;
+    @apply py-8 md:py-12 lg:py-section-normal;
   }
 
   .section-tight {
-    @apply py-section-tight;
+    @apply py-6 md:py-8 lg:py-section-tight;
   }
 
   .section-loose {
-    @apply py-section-loose;
+    @apply py-12 md:py-16 lg:py-section-loose;
   }
 
   /* Content container */
   .container-content {
-    @apply max-w-content mx-auto px-4;
+    @apply max-w-content mx-auto px-4 sm:px-6;
   }
 }
 

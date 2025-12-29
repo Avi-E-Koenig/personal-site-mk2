@@ -9,20 +9,20 @@ export default async function Home() {
       <div className="container-content">
         {/* Hero */}
         <section className="text-center mb-section-normal">
-          <h1 className="text-h1 text-text-primary font-semibold mb-4">
+          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('hero.name')}
           </h1>
-          <p className="text-xl text-text-secondary mb-6">
+          <p className="text-lg sm:text-xl text-text-secondary mb-6">
             {t('hero.title')}
           </p>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto px-4 sm:px-0">
             {t('hero.tagline')}
           </p>
         </section>
 
         {/* Quick Snapshot */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
             {t('snapshot.title')}
           </h2>
           <div className="space-y-4">
@@ -43,7 +43,7 @@ export default async function Home() {
 
         {/* What I'm Looking For */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
             {t('lookingFor.title')}
           </h2>
           <ul className="space-y-3 list-disc list-inside text-text-secondary">
@@ -55,7 +55,7 @@ export default async function Home() {
 
         {/* How I Work Summary */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
             {t('howIWork.title')}
           </h2>
           <ul className="space-y-3 list-disc list-inside text-text-secondary">
@@ -67,7 +67,7 @@ export default async function Home() {
 
         {/* CTAs */}
         <section className="text-center">
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
             <Link href="/resume" className="btn-primary">
               {t('cta.resume')}
             </Link>
