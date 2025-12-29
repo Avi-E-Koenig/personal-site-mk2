@@ -1,0 +1,176 @@
+{
+  "nav": {
+    "home": "Home",
+    "howIWork": "How I Work",
+    "experience": "Experience",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "name": "Avi Koenig",
+      "title": "Senior Backend-Oriented Full-Stack Developer",
+      "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and reliable delivery under real-world constraints."
+    },
+    "snapshot": {
+      "title": "Quick Snapshot",
+      "item1": "TypeScript / Node.js (NestJS, REST, GraphQL)",
+      "item2": "Database-heavy systems: Oracle PL/SQL, MSSQL, MongoDB",
+      "item3": "Internal products: CRMs, dashboards, operational tools",
+      "item4": "Strength: understanding existing systems quickly and improving them safely"
+    },
+    "lookingFor": {
+      "title": "What I'm Looking For",
+      "item1": "Senior backend or backend-leaning full-stack roles",
+      "item2": "Teams working with existing systems, integrations, or operational complexity",
+      "item3": "Remote-friendly environments with clear ownership and collaboration"
+    },
+    "howIWork": {
+      "title": "How I Work",
+      "item1": "Understand behavior before refactoring",
+      "item2": "Improve incrementally with safeguards (tests, documentation, controlled change)",
+      "item3": "Balance technical quality with delivery constraints and long-term maintainability"
+    },
+    "cta": {
+      "resume": "Resume (PDF)",
+      "contact": "Contact"
+    }
+  },
+  "howIWork": {
+    "title": "How I Work",
+    "subtitle": "Safe changes, clear reasoning, and systems that stay maintainable after delivery.",
+    "understanding": {
+      "title": "Understanding Before Changing",
+      "content1": "Most systems aren't greenfield. They're production systems with history, constraints, and business-critical behavior.",
+      "content2": "Before making changes, I focus on understanding how the system behaves today, which workflows matter most, and where assumptions are undocumented."
+    },
+    "behavior": {
+      "title": "Behavior Over Elegance",
+      "content1": "Correctness and stability matter more than elegance.",
+      "content2": "Refactoring without understanding behavior often creates subtle regressions that are expensive to detect and fix. Clean code matters when it supports reliability, clarity, and long-term maintainability."
+    },
+    "refactoring": {
+      "title": "Refactoring Safely and Incrementally",
+      "content": "I treat refactoring as a controlled process:",
+      "item1": "Capture existing behavior (often via tests)",
+      "item2": "Introduce safeguards before structural changes",
+      "item3": "Prefer small, reversible steps over large rewrites",
+      "item4": "Improve the system without disrupting production"
+    },
+    "ai": {
+      "title": "Using AI as a Supportive Tool",
+      "content1": "I use modern AI tools to reduce mechanical overhead and accelerate feedback, especially when exploring complex or unfamiliar codebases.",
+      "content2": "Examples include improving navigation through large systems, validating edge cases, drafting initial tests or documentation, and speeding up investigation cycles.",
+      "content3": "AI is a supportive tool — not a decision-maker. Responsibility for the final solution always remains with me."
+    },
+    "constraints": {
+      "title": "Working Within Real Constraints",
+      "content1": "Real systems come with constraints:",
+      "item1": "Legacy runtimes",
+      "item2": "Missing test coverage",
+      "item3": "Tight delivery timelines",
+      "item4": "Business priorities that limit ideal solutions",
+      "content2": "I make trade-offs explicit and focus on improvements that are realistic and sustainable for the team."
+    },
+    "ownership": {
+      "title": "Ownership and Handover",
+      "content": "I write code that others can confidently maintain:",
+      "item1": "Clear structure and naming",
+      "item2": "Documentation where context matters",
+      "item3": "Communication that explains decisions, not just implementation"
+    },
+    "adapting": {
+      "title": "Adapting to Teams and Technologies",
+      "content": "My strongest experience is in TypeScript-based backend systems, and I'm comfortable onboarding into new codebases and technologies when context, ownership, and collaboration are clear."
+    }
+  },
+  "experience": {
+    "title": "Experience Beyond the CV",
+    "intro": "Not all meaningful work fits into a one-page resume. Across product roles and consulting work, I've contributed to a wide range of systems—often already in production, undocumented, or constrained by legacy choices. Rather than listing clients, this page describes the kinds of environments I've worked in and how I approach them.",
+    "pattern1": {
+      "title": "Pattern 1 — Legacy Systems That Can't Be Rewritten",
+      "situation": {
+        "title": "Situation",
+        "content": "Outdated runtimes, missing tests, fragmented business logic, limited ability to upgrade."
+      },
+      "approach": {
+        "title": "Approach",
+        "content": "Understand behavior first, document workflows, add safeguards, improve incrementally."
+      },
+      "why": {
+        "title": "Why It Matters",
+        "content": "When rewrites aren't realistic, safe evolution is the highest-value skill."
+      }
+    },
+    "pattern2": {
+      "title": "Pattern 2 — Database-Heavy Operational Systems",
+      "situation": {
+        "title": "Situation",
+        "content": "Business rules in the database, complex procedures/joins, downstream impact from small changes."
+      },
+      "approach": {
+        "title": "Approach",
+        "content": "Treat the DB as first-class, reason about behavior over time, prioritize correctness and clarity."
+      },
+      "why": {
+        "title": "Why It Matters",
+        "content": "Many failures come from misunderstanding data behavior, not just \"bad code.\""
+      }
+    },
+    "pattern3": {
+      "title": "Pattern 3 — Low-Context Environments",
+      "situation": {
+        "title": "Situation",
+        "content": "Missing documentation, original authors gone, fragmented context, pressure to deliver."
+      },
+      "approach": {
+        "title": "Approach",
+        "content": "Extract signal quickly, identify risk areas early, build a mental model, communicate clearly."
+      },
+      "why": {
+        "title": "Why It Matters",
+        "content": "Strong onboarding and system understanding lowers risk and increases delivery confidence."
+      }
+    },
+    "pattern4": {
+      "title": "Pattern 4 — Stabilization and Debugging",
+      "situation": {
+        "title": "Situation",
+        "content": "Production issues, inconsistent behavior, accumulated debt."
+      },
+      "approach": {
+        "title": "Approach",
+        "content": "Trace end-to-end, fix root causes, make minimal meaningful changes, leave the system better."
+      },
+      "why": {
+        "title": "Why It Matters",
+        "content": "Reliability is a feature, especially in operational systems."
+      }
+    },
+    "pattern5": {
+      "title": "Pattern 5 — Mentorship and Raising Standards",
+      "situation": {
+        "title": "Situation",
+        "content": "Gaps in fundamentals, weak practices, high pressure."
+      },
+      "approach": {
+        "title": "Approach",
+        "content": "Share context, introduce improvements incrementally, adapt to team culture."
+      },
+      "why": {
+        "title": "Why It Matters",
+        "content": "Sustainable engineering comes from shared understanding."
+      }
+    },
+    "closing": "My focus is consistent: reduce risk, improve clarity, respect constraints, and leave systems—and teams—stronger than I found them."
+  },
+  "contact": {
+    "title": "Contact",
+    "body": "If you'd like to discuss a role or collaboration, the fastest way to reach me is email or LinkedIn."
+  },
+  "resume": {
+    "title": "Resume",
+    "download": "Download PDF"
+  }
+}
+
