@@ -16,19 +16,15 @@ export default async function Contact() {
         </header>
 
         <div className="space-y-4">
-          <div>
+          <div className='flex items-center gap-2'>
             <p className="text-base text-text-secondary">
-              <strong className="text-text-primary">Email:</strong>{' '}
-              <a href="mailto:avi@koenig.co.il" className="link">
-                avi@koenig.co.il
+              <a href={`mailto:${t('email')}`} className="link" target="_blank" rel="noopener noreferrer">
+                {t('emailLabel')}
               </a>
-            </p>
-          </div>
-          <div>
+            </p> |
             <p className="text-base text-text-secondary">
-              <strong className="text-text-primary">LinkedIn:</strong>{' '}
-              <a href="#" className="link">
-                [LinkedIn Profile]
+              <a href={t('linkedinProfile')} className="link" target="_blank" rel="noopener noreferrer">
+                {t('linkedinLabel')}
               </a>
             </p>
           </div>

@@ -43,7 +43,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}
-          <div className="flex items-center gap-4 md:gap-0">
+          <div className="flex items-center justify-between w-full md:w-auto md:justify-end gap-4">
             <LanguageSwitcher />
             
             {/* Hamburger Menu Button (Mobile) */}

@@ -88,7 +88,7 @@
     "title": "Experience Beyond the CV",
     "intro": "Not all meaningful work fits into a one-page resume. Across product roles and consulting work, I've contributed to a wide range of systems—often already in production, undocumented, or constrained by legacy choices. Rather than listing clients, this page describes the kinds of environments I've worked in and how I approach them.",
     "pattern1": {
-      "title": "Pattern 1 — Legacy Systems That Can't Be Rewritten",
+      "title": "Legacy Systems That Can't Be Rewritten",
       "situation": {
         "title": "Situation",
         "content": "Outdated runtimes, missing tests, fragmented business logic, limited ability to upgrade."
@@ -103,7 +103,7 @@
       }
     },
     "pattern2": {
-      "title": "Pattern 2 — Database-Heavy Operational Systems",
+      "title": "Database-Heavy Operational Systems",
       "situation": {
         "title": "Situation",
         "content": "Business rules in the database, complex procedures/joins, downstream impact from small changes."
@@ -118,7 +118,7 @@
       }
     },
     "pattern3": {
-      "title": "Pattern 3 — Low-Context Environments",
+      "title": "Low-Context Environments",
       "situation": {
         "title": "Situation",
         "content": "Missing documentation, original authors gone, fragmented context, pressure to deliver."
@@ -133,7 +133,7 @@
       }
     },
     "pattern4": {
-      "title": "Pattern 4 — Stabilization and Debugging",
+      "title": "Stabilization and Debugging",
       "situation": {
         "title": "Situation",
         "content": "Production issues, inconsistent behavior, accumulated debt."
@@ -148,7 +148,7 @@
       }
     },
     "pattern5": {
-      "title": "Pattern 5 — Mentorship and Raising Standards",
+      "title": "Mentorship and Raising Standards",
       "situation": {
         "title": "Situation",
         "content": "Gaps in fundamentals, weak practices, high pressure."
@@ -166,11 +166,15 @@
   },
   "contact": {
     "title": "Contact",
-    "body": "If you'd like to discuss a role or collaboration, the fastest way to reach me is email or LinkedIn."
+    "body": "If you'd like to discuss a role or collaboration, the fastest way to reach me is email or LinkedIn.",
+    "linkedinProfile": "https://www.linkedin.com/in/avi-koenig/",
+    "email": "avi@koenig.co.il",
+    "emailLabel": "Email",
+    "emailAddress": "avi@koenig.co.il",
+    "linkedinLabel": "LinkedIn"
   },
   "resume": {
     "title": "Resume",
     "download": "Download PDF"
   }
 }
-
