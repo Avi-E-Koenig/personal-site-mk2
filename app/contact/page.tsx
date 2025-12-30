@@ -1,4 +1,31 @@
+import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('contact')
+  
+  const title = `${t('title')} - Avi Koenig`
+  const description = t('body')
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${baseUrl}/contact`,
+      siteName: 'Avi Koenig',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
+  }
+}
 
 export default async function Contact() {
   const t = await getTranslations('contact')

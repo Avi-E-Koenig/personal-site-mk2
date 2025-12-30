@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
             min-h-[44px] min-w-[44px]
             ${
               locale === loc
-                ? 'bg-accent-500 text-text-inverse'
+                ? 'bg-accent-500 text-text-inverse font-semibold ring-2 ring-accent-500 ring-offset-2 ring-offset-background-primary'
                 : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
             }
           `}
