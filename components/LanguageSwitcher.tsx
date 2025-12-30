@@ -2,16 +2,18 @@
 
 import { setLocaleCookie, locales, type Locale } from '@/lib/i18n/client'
 import { useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 
 export default function LanguageSwitcher() {
   const locale = useLocale()
+  const router = useRouter()
 
   const handleLocaleChange = (newLocale: Locale) => {
     if (newLocale === locale) return
     
     setLocaleCookie(newLocale)
-    // Use full page reload for cookie-based i18n to ensure server components re-render
-    window.location.reload()
+    // Refresh server components without full page reload
+    router.refresh()
   }
 
   return (
