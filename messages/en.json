@@ -10,7 +10,8 @@
     "hero": {
       "name": "Avi Koenig",
       "title": "Senior Backend-Oriented Full-Stack Developer",
-      "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints."
+      "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints.",
+      "credibility": "7+ years across product teams and consulting, focused on internal systems and legacy modernization."
     },
     "snapshot": {
       "title": "Quick Snapshot",
@@ -176,6 +177,7 @@
   },
   "resume": {
     "title": "Resume",
-    "download": "Download PDF"
+    "download": "Download PDF",
+    "openInNewTab": "Open in new tab"
   }
 }
