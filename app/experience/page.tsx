@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+import SectionHeadingMarker from '@/components/SectionHeadingMarker'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
@@ -47,7 +48,8 @@ export default async function Experience() {
 
         <div className="space-y-section-tight">
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('existingSystems.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -70,7 +72,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('backendSystems.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -85,7 +88,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('internalTools.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -103,7 +107,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('refactoring.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -121,7 +126,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('constraints.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -139,7 +145,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('collaboration.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -157,7 +164,8 @@ export default async function Experience() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('summary.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">

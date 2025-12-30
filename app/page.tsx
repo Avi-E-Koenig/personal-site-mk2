@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+import SectionHeadingMarker from '@/components/SectionHeadingMarker'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
@@ -35,24 +35,27 @@ export default async function Home() {
     <div className="section">
       <div className="container-content">
         {/* Hero */}
-        <section className="mb-section-normal">
-          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
+        <section className="mb-6">
+          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-2">
             {t('hero.name')}
           </h1>
-          <p className="text-lg sm:text-xl text-text-secondary mb-6">
+          <p className="text-lg sm:text-xl text-accent-500 mb-3 font-bold">
             {t('hero.title')}
           </p>
-          <p className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto px-4 sm:px-0">
+          <p className="text-sm sm:text-base text-text-muted max-w-2xl px-4 sm:px-0 mt-4">
             {t('hero.tagline')}
           </p>
-          <p className="text-sm sm:text-base text-text-muted max-w-2xl mx-auto px-4 sm:px-0 mt-4">
+          <p className="text-sm sm:text-base text-text-muted max-w-2xl px-4 sm:px-0 mt-4">
             {t('hero.credibility')}
           </p>
         </section>
 
+        <div className="h-px w-full bg-border-default my-6" />
+
         {/* Quick Snapshot */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6 flex items-center gap-3">
+            <SectionHeadingMarker />
             {t('snapshot.title')}
           </h2>
           <div className="space-y-4">
@@ -85,7 +88,8 @@ export default async function Home() {
 
         {/* What I'm Looking For */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6 flex items-center gap-3">
+            <SectionHeadingMarker />
             {t('lookingFor.title')}
           </h2>
           <ul className="space-y-3 list-disc list-inside text-text-secondary">
@@ -97,7 +101,8 @@ export default async function Home() {
 
         {/* How I Work Summary */}
         <section className="mb-section-normal">
-          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6">
+          <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-6 flex items-center gap-3">
+            <SectionHeadingMarker />
             {t('howIWork.title')}
           </h2>
           <ul className="space-y-3 list-disc list-inside text-text-secondary">

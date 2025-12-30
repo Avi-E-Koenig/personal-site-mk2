@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+import SectionHeadingMarker from '@/components/SectionHeadingMarker'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
@@ -44,7 +45,8 @@ export default async function Mindset() {
 
         <div className="space-y-section-tight">
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('understanding.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -56,7 +58,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('behavior.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -68,7 +71,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('refactoring.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -83,7 +87,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('ai.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -98,7 +103,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('constraints.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -116,7 +122,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('ownership.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -130,7 +137,8 @@ export default async function Mindset() {
           </section>
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('adapting.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed">
@@ -140,7 +148,8 @@ export default async function Mindset() {
 
           {/* Experience Patterns Section */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.title')}
             </h2>
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
@@ -150,7 +159,8 @@ export default async function Mindset() {
 
           {/* Pattern 1 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.pattern1.title')}
             </h2>
             <div className="space-y-4">
@@ -183,7 +193,8 @@ export default async function Mindset() {
 
           {/* Pattern 2 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.pattern2.title')}
             </h2>
             <div className="space-y-4">
@@ -216,7 +227,8 @@ export default async function Mindset() {
 
           {/* Pattern 3 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.pattern3.title')}
             </h2>
             <div className="space-y-4">
@@ -249,7 +261,8 @@ export default async function Mindset() {
 
           {/* Pattern 4 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.pattern4.title')}
             </h2>
             <div className="space-y-4">
@@ -282,7 +295,8 @@ export default async function Mindset() {
 
           {/* Pattern 5 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
               {t('experience.pattern5.title')}
             </h2>
             <div className="space-y-4">

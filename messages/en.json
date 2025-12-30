@@ -219,7 +219,7 @@
     "subtitle": "Practical experience with real systems, not just ideal ones",
     "intro": "Most of my professional experience has been working on existing production systems: often internal tools, CRMs, dashboards, and operational platforms that had already accumulated complexity over time. This includes both product roles and consulting work, where I was brought in to extend, stabilize, refactor, or unblock systems that were already in active use. Below is a representative overview of the kinds of environments I've worked in and the responsibilities I typically take on.",
     "existingSystems": {
-      "title": "Working with Existing Production Systems",
+      "title": "Working with Production Systems",
       "intro": "I have extensive experience joining projects after initial development, where systems already have:",
       "item1": "Active users and business dependencies",
       "item2": "Limited or outdated documentation",
