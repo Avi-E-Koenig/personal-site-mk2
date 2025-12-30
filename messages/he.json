@@ -176,6 +176,7 @@
   },
   "resume": {
     "title": "קורות חיים",
-    "download": "הורדת PDF"
+    "download": "הורדת PDF",
+    "openInNewTab": "פתיחה בלשונית חדשה"
   }
 }

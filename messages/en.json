@@ -176,6 +176,7 @@
   },
   "resume": {
     "title": "Resume",
-    "download": "Download PDF"
+    "download": "Download PDF",
+    "openInNewTab": "Open in new tab"
   }
 }
