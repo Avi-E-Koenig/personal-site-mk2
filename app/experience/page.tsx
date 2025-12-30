@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+import SectionHeadingMarker from '@/components/SectionHeadingMarker'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
@@ -7,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('experience')
   
   const title = `${t('title')} - Avi Koenig`
-  const description = t('intro').substring(0, 160) + '...'
+  const description = t('intro')
   
   return {
     title,
@@ -37,181 +38,166 @@ export default async function Experience() {
           <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('title')}
           </h1>
+          <p className="text-lg sm:text-xl text-text-secondary mb-4">
+            {t('subtitle')}
+          </p>
           <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
             {t('intro')}
           </p>
         </header>
 
         <div className="space-y-section-tight">
-          {/* Pattern 1 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h3 md:text-h3-md text-text-primary font-semibold mb-4">
-              {t('pattern1.title')}
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('existingSystems.title')}
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern1.situation.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern1.situation.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern1.approach.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern1.approach.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern1.why.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern1.why.content')}
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('existingSystems.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('existingSystems.item1')}</li>
+              <li>{t('existingSystems.item2')}</li>
+              <li>{t('existingSystems.item3')}</li>
+              <li>{t('existingSystems.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('existingSystems.role')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary">
+              <li>{t('existingSystems.roleItem1')}</li>
+              <li>{t('existingSystems.roleItem2')}</li>
+              <li>{t('existingSystems.roleItem3')}</li>
+            </ul>
           </section>
 
-          {/* Pattern 2 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h3 md:text-h3-md text-text-primary font-semibold mb-4">
-              {t('pattern2.title')}
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('backendSystems.title')}
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern2.situation.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern2.situation.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern2.approach.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern2.approach.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern2.why.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern2.why.content')}
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('backendSystems.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary">
+              <li>{t('backendSystems.item1')}</li>
+              <li>{t('backendSystems.item2')}</li>
+              <li>{t('backendSystems.item3')}</li>
+              <li>{t('backendSystems.item4')}</li>
+            </ul>
           </section>
 
-          {/* Pattern 3 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h3 md:text-h3-md text-text-primary font-semibold mb-4">
-              {t('pattern3.title')}
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('internalTools.title')}
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern3.situation.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern3.situation.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern3.approach.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern3.approach.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern3.why.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern3.why.content')}
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('internalTools.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('internalTools.item1')}</li>
+              <li>{t('internalTools.item2')}</li>
+              <li>{t('internalTools.item3')}</li>
+              <li>{t('internalTools.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('internalTools.closing')}
+            </p>
           </section>
 
-          {/* Pattern 4 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h3 md:text-h3-md text-text-primary font-semibold mb-4">
-              {t('pattern4.title')}
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('refactoring.title')}
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern4.situation.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern4.situation.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern4.approach.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern4.approach.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern4.why.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern4.why.content')}
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('refactoring.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('refactoring.item1')}</li>
+              <li>{t('refactoring.item2')}</li>
+              <li>{t('refactoring.item3')}</li>
+              <li>{t('refactoring.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('refactoring.closing')}
+            </p>
           </section>
 
-          {/* Pattern 5 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h3 md:text-h3-md text-text-primary font-semibold mb-4">
-              {t('pattern5.title')}
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('constraints.title')}
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern5.situation.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern5.situation.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern5.approach.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern5.approach.content')}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-h4 md:text-h4-md text-text-primary font-semibold mb-2">
-                  {t('pattern5.why.title')}
-                </h3>
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {t('pattern5.why.content')}
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('constraints.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('constraints.item1')}</li>
+              <li>{t('constraints.item2')}</li>
+              <li>{t('constraints.item3')}</li>
+              <li>{t('constraints.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('constraints.closing')}
+            </p>
           </section>
 
-          {/* Closing */}
-          <section className="mt-section-normal">
-            <p className="text-lg text-text-secondary leading-relaxed">
-              {t('closing')}
+          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('collaboration.title')}
+            </h2>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('collaboration.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('collaboration.item1')}</li>
+              <li>{t('collaboration.item2')}</li>
+              <li>{t('collaboration.item3')}</li>
+              <li>{t('collaboration.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('collaboration.closing')}
+            </p>
+          </section>
+
+          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('summary.title')}
+            </h2>
+            <p className="text-base text-text-secondary leading-relaxed mb-4">
+              {t('summary.intro')}
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4">
+              <li>{t('summary.item1')}</li>
+              <li>{t('summary.item2')}</li>
+              <li>{t('summary.item3')}</li>
+              <li>{t('summary.item4')}</li>
+            </ul>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('summary.closing')}
+            </p>
+          </section>
+
+          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('github.title')}
+            </h2>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('github.text')}{' '}
+              <a
+                href="https://github.com/Avi-E-Koenig"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link text-accent-500 hover:text-accent-600"
+              >
+                {t('github.linkText')}
+              </a>
+              .
             </p>
           </section>
         </div>
@@ -219,4 +205,3 @@ export default async function Experience() {
     </div>
   )
 }
-

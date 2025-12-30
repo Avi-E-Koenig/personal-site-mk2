@@ -2,21 +2,30 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from './LanguageSwitcher'
 import { cn } from '@/lib/utils/cn'
 
 export default function Navigation() {
   const t = useTranslations('nav')
+  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
     { href: '/', label: t('home') },
-    { href: '/how-i-work', label: t('howIWork') },
+    { href: '/mindset', label: t('mindset') },
     { href: '/experience', label: t('experience') },
     { href: '/resume', label: t('resume') },
     { href: '/contact', label: t('contact') },
   ]
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/' || pathname === ''
+    }
+    return pathname === href || pathname?.startsWith(`${href}/`)
+  }
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
@@ -32,12 +41,21 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'text-text-secondary hover:text-text-primary',
+                  'text-sm font-medium',
                   'transition-colors duration-200',
-                  'text-sm font-medium'
+                  'relative',
+                  isActive(item.href)
+                    ? 'text-text-primary font-semibold'
+                    : 'text-text-secondary hover:text-text-primary'
                 )}
               >
                 {item.label}
+                <span 
+                  className={cn(
+                    'absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-300 ease-in-out',
+                    isActive(item.href) ? 'w-full' : 'w-0'
+                  )} 
+                />
               </Link>
             ))}
           </div>
@@ -83,9 +101,11 @@ export default function Navigation() {
                   onClick={closeMenu}
                   className={cn(
                     'block px-4 py-3 rounded-md',
-                    'text-text-secondary hover:text-text-primary hover:bg-background-secondary',
                     'transition-colors duration-200',
-                    'text-base font-medium'
+                    'text-base font-medium',
+                    isActive(item.href)
+                      ? 'text-text-primary font-semibold bg-background-secondary'
+                      : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
                   )}
                 >
                   {item.label}
