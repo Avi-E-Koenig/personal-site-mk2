@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+import ContactLinks from '@/components/ContactLinks'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
@@ -43,26 +44,7 @@ export default async function Contact() {
         </header>
 
         <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <a
-              href={`mailto:${t('email')}`}
-              className="link text-base text-text-secondary"
-              title="Send email"
-            >
-              {t('email')}
-            </a>
-
-            <span className="text-text-muted">|</span>
-
-            <a
-              href={t('linkedinProfile')}
-              className="link text-base text-text-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('linkedinLabel')}
-            </a>
-          </div>
+          <ContactLinks variant="page" />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { Inter, Heebo } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 import { getLocale } from '@/lib/i18n/server'
 
 const inter = Inter({
@@ -38,6 +39,7 @@ export default async function RootLayout({
           <div className="min-h-screen flex flex-col">
             <Navigation />
             <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </Providers>
       </body>

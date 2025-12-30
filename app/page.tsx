@@ -35,7 +35,7 @@ export default async function Home() {
     <div className="section">
       <div className="container-content">
         {/* Hero */}
-        <section className="text-center mb-section-normal">
+        <section className="mb-section-normal">
           <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('hero.name')}
           </h1>
@@ -105,28 +105,6 @@ export default async function Home() {
             <li>{t('howIWork.item2')}</li>
             <li>{t('howIWork.item3')}</li>
           </ul>
-        </section>
-
-        {/* CTAs */}
-        <section className="text-center">
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-            <Link href="/resume" className="btn-primary">
-              {t('cta.resume')}
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              {t('cta.contact')}
-            </Link>
-          </div>
-          <div className="mt-4">
-            <a
-              href="https://www.linkedin.com/in/avi-koenig/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base text-text-secondary hover:text-text-primary transition-colors"
-            >
-              {t('cta.linkedin')}
-            </a>
-          </div>
         </section>
       </div>
     </div>

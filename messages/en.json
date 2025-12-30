@@ -1,14 +1,14 @@
 {
   "nav": {
     "home": "Home",
-    "howIWork": "How I Work",
+    "mindset": "Mindset",
     "experience": "Experience",
     "resume": "Resume",
     "contact": "Contact"
   },
   "home": {
     "hero": {
-      "name": "Avi Koenig",
+      "name": "Hi! I'm Avi Koenig",
       "title": "Senior Backend-Oriented Full-Stack Developer",
       "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints.",
       "credibility": "7+ years across product teams and consulting, focused on internal systems and legacy modernization."
@@ -63,7 +63,7 @@
       "title": "Using AI as a Supportive Tool",
       "content1": "I use modern AI tools to reduce mechanical overhead and accelerate feedback, especially when exploring complex or unfamiliar codebases.",
       "content2": "Examples include improving navigation through large systems, validating edge cases, drafting initial tests or documentation, and speeding up investigation cycles.",
-      "content3": "AI is a supportive tool — not a decision-maker. Responsibility for the final solution always remains with me."
+      "content3": "AI is a supportive tool, not a decision-maker. Responsibility for the final solution always remains with me."
     },
     "constraints": {
       "title": "Working Within Real Constraints",
@@ -86,9 +86,56 @@
       "content": "My strongest experience is in TypeScript-based backend systems, and I'm comfortable onboarding into new codebases and technologies when context, ownership, and collaboration are clear."
     }
   },
-  "experience": {
-    "title": "Experience Beyond the CV",
-    "intro": "Not all meaningful work fits into a one-page resume. Across product roles and consulting work, I've contributed to a wide range of systems—often already in production, undocumented, or constrained by legacy choices. Rather than listing clients, this page describes the kinds of environments I've worked in and how I approach them.",
+  "mindset": {
+    "title": "Mindset",
+    "subtitle": "Safe changes, clear reasoning, and systems that stay maintainable after delivery.",
+    "understanding": {
+      "title": "Understanding Before Changing",
+      "content1": "Most systems aren't greenfield. They're production systems with history, constraints, and business-critical behavior.",
+      "content2": "Before making changes, I focus on understanding how the system behaves today, which workflows matter most, and where assumptions are undocumented."
+    },
+    "behavior": {
+      "title": "Behavior Over Elegance",
+      "content1": "Correctness and stability matter more than elegance.",
+      "content2": "Refactoring without understanding behavior often creates subtle regressions that are expensive to detect and fix. Clean code matters when it supports reliability, clarity, and long-term maintainability."
+    },
+    "refactoring": {
+      "title": "Refactoring Safely and Incrementally",
+      "content": "I treat refactoring as a controlled process:",
+      "item1": "Capture existing behavior (often via tests)",
+      "item2": "Introduce safeguards before structural changes",
+      "item3": "Prefer small, reversible steps over large rewrites",
+      "item4": "Improve the system without disrupting production"
+    },
+    "ai": {
+      "title": "Using AI as a Supportive Tool",
+      "content1": "I use modern AI tools to reduce mechanical overhead and accelerate feedback, especially when exploring complex or unfamiliar codebases.",
+      "content2": "Examples include improving navigation through large systems, validating edge cases, drafting initial tests or documentation, and speeding up investigation cycles.",
+      "content3": "AI is a supportive tool, not a decision-maker. Responsibility for the final solution always remains with me."
+    },
+    "constraints": {
+      "title": "Working Within Real Constraints",
+      "content1": "Real systems come with constraints:",
+      "item1": "Legacy runtimes",
+      "item2": "Missing test coverage",
+      "item3": "Tight delivery timelines",
+      "item4": "Business priorities that limit ideal solutions",
+      "content2": "I make trade-offs explicit and focus on improvements that are realistic and sustainable for the team."
+    },
+    "ownership": {
+      "title": "Ownership and Handover",
+      "content": "I write code that others can confidently maintain:",
+      "item1": "Clear structure and naming",
+      "item2": "Documentation where context matters",
+      "item3": "Communication that explains decisions, not just implementation"
+    },
+    "adapting": {
+      "title": "Adapting to Teams and Technologies",
+      "content": "My strongest experience is in TypeScript-based backend systems, and I'm comfortable onboarding into new codebases and technologies when context, ownership, and collaboration are clear."
+    },
+    "experience": {
+      "title": "Experience Beyond the CV",
+      "intro": "Not all meaningful work fits into a one-page resume. Across product roles and consulting work, I've contributed to a wide range of systems, often already in production, undocumented, or constrained by legacy choices. Rather than listing clients, this page describes the kinds of environments I've worked in and how I approach them.",
     "pattern1": {
       "title": "Legacy Systems That Can't Be Rewritten",
       "situation": {
@@ -164,16 +211,91 @@
         "content": "Sustainable engineering comes from shared understanding."
       }
     },
-    "closing": "My focus is consistent: reduce risk, improve clarity, respect constraints, and leave systems—and teams—stronger than I found them."
+    "closing": "My focus is consistent: reduce risk, improve clarity, respect constraints, and leave systems and teams stronger than I found them."
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Practical experience with real systems, not just ideal ones",
+    "intro": "Most of my professional experience has been working on existing production systems: often internal tools, CRMs, dashboards, and operational platforms that had already accumulated complexity over time. This includes both product roles and consulting work, where I was brought in to extend, stabilize, refactor, or unblock systems that were already in active use. Below is a representative overview of the kinds of environments I've worked in and the responsibilities I typically take on.",
+    "existingSystems": {
+      "title": "Working with Existing Production Systems",
+      "intro": "I have extensive experience joining projects after initial development, where systems already have:",
+      "item1": "Active users and business dependencies",
+      "item2": "Limited or outdated documentation",
+      "item3": "Inconsistent code quality",
+      "item4": "Technical debt accumulated under delivery pressure",
+      "role": "In these environments, my role is usually to:",
+      "roleItem1": "Understand current system behavior quickly",
+      "roleItem2": "Identify high-risk areas before making changes",
+      "roleItem3": "Improve reliability and maintainability without disrupting production"
+    },
+    "backendSystems": {
+      "title": "Backend and Data-Driven Systems",
+      "intro": "A large portion of my work has been backend-focused, especially on data-driven internal systems where correctness and consistency matter more than visual polish. This includes:",
+      "item1": "API development and integrations",
+      "item2": "Business logic implemented across services and databases",
+      "item3": "Working directly with relational databases and stored procedures",
+      "item4": "Reasoning about data behavior over time and across workflows"
+    },
+    "internalTools": {
+      "title": "Internal Tools, CRMs, and Dashboards",
+      "intro": "Rather than public-facing marketing sites, most of my experience is with internal products used daily by operational teams. Typical characteristics of these systems:",
+      "item1": "Complex business rules",
+      "item2": "Role-based access and permissions",
+      "item3": "Non-trivial workflows",
+      "item4": "Requirements that prioritize accuracy and predictability over aesthetics",
+      "closing": "I've built and maintained UIs that are tailored to specific operational needs, focusing on clarity, efficiency, and correctness rather than visual flair."
+    },
+    "refactoring": {
+      "title": "Refactoring, Stabilization, and Ongoing Improvement",
+      "intro": "I'm often involved in work that includes:",
+      "item1": "Refactoring legacy codebases incrementally",
+      "item2": "Improving structure and readability without large rewrites",
+      "item3": "Introducing tests and documentation into existing systems",
+      "item4": "Debugging subtle production issues and edge cases",
+      "closing": "Rather than \"rewrite everything\" approaches, I focus on safe, controlled improvements that align with business constraints and team capacity."
+    },
+    "constraints": {
+      "title": "Working Under Constraints",
+      "intro": "Many of the systems I've worked on had real limitations, such as:",
+      "item1": "Legacy runtimes or frameworks that could not be upgraded easily",
+      "item2": "Tight delivery timelines",
+      "item3": "Partial test coverage",
+      "item4": "Dependencies on external or third-party systems",
+      "closing": "I'm comfortable making pragmatic trade-offs in these situations and communicating them clearly, both technically and to non-technical stakeholders."
+    },
+    "collaboration": {
+      "title": "Collaboration and Responsibility",
+      "intro": "Across teams and projects, I've often taken responsibility for:",
+      "item1": "Owning complex parts of the system",
+      "item2": "Supporting teammates by sharing context and reasoning",
+      "item3": "Helping improve development practices incrementally",
+      "item4": "Leaving systems in a state that others can maintain with confidence",
+      "closing": "While I enjoy mentoring and knowledge sharing, my primary focus is always on delivering reliable, maintainable systems that teams can depend on."
+    },
+    "summary": {
+      "title": "Summary",
+      "intro": "My experience is centered around real-world software development:",
+      "item1": "Existing systems, not greenfield demos",
+      "item2": "Internal tools with operational complexity",
+      "item3": "Backend and data-heavy architectures",
+      "item4": "Refactoring and stabilization under constraints",
+      "closing": "This background allows me to contribute effectively in environments where reliability, clarity, and long-term maintainability matter."
+    }
   },
   "contact": {
     "title": "Contact",
-    "body": "If you'd like to discuss a role or collaboration, the fastest way to reach me is email or LinkedIn.",
+    "body": "If you'd like to discuss a role or collaboration, feel free to reach out via email, LinkedIn, WhatsApp, or phone.",
     "linkedinProfile": "https://www.linkedin.com/in/avi-koenig/",
     "email": "avi@koenig.co.il",
     "emailLabel": "Email",
     "emailAddress": "avi@koenig.co.il",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Hi, I'd like to discuss a potential role or collaboration.",
+    "phone": "+972 54-691-2072",
+    "phoneLabel": "Phone"
   },
   "resume": {
     "title": "Resume",
