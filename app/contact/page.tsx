@@ -43,17 +43,25 @@ export default async function Contact() {
         </header>
 
         <div className="space-y-4">
-          <div className='flex items-center gap-2'>
-            <p className="text-base text-text-secondary">
-              <a href={`mailto:${t('email')}`} className="link" target="_blank" rel="noopener noreferrer">
-                {t('email')}
-              </a>
-            </p> |
-            <p className="text-base text-text-secondary">
-              <a href={t('linkedinProfile')} className="link" target="_blank" rel="noopener noreferrer">
-                {t('linkedinLabel')}
-              </a>
-            </p>
+          <div className="flex items-center gap-4">
+            <a
+              href={`mailto:${t('email')}`}
+              className="link text-base text-text-secondary"
+              title="Send email"
+            >
+              {t('email')}
+            </a>
+
+            <span className="text-text-muted">|</span>
+
+            <a
+              href={t('linkedinProfile')}
+              className="link text-base text-text-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('linkedinLabel')}
+            </a>
           </div>
         </div>
       </div>
