@@ -1,5 +1,32 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('home')
+  
+  const title = 'Avi Koenig - Senior Backend-Oriented Full-Stack Developer'
+  const description = t('hero.tagline')
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: baseUrl,
+      siteName: 'Avi Koenig',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
+  }
+}
 
 export default async function Home() {
   const t = await getTranslations('home')
@@ -17,6 +44,9 @@ export default async function Home() {
           </p>
           <p className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto px-4 sm:px-0">
             {t('hero.tagline')}
+          </p>
+          <p className="text-sm sm:text-base text-text-muted max-w-2xl mx-auto px-4 sm:px-0 mt-4">
+            {t('hero.credibility')}
           </p>
         </section>
 
