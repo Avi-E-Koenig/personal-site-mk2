@@ -34,11 +34,11 @@ export default async function Contact() {
   return (
     <div className="section">
       <div className="container-content">
-        <header className="mb-section-normal">
+        <header className="mb-10">
           <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('title')}
           </h1>
-          <p className="text-lg text-text-secondary">
+          <p className="text-lg text-text-secondary whitespace-pre-line">
             {t('body')}
           </p>
         </header>

@@ -282,16 +282,22 @@
       "item3": "Backend and data-heavy architectures",
       "item4": "Refactoring and stabilization under constraints",
       "closing": "This background allows me to contribute effectively in environments where reliability, clarity, and long-term maintainability matter."
+    },
+    "github": {
+      "title": "Code Examples",
+      "text": "Feel free to look me up on",
+      "linkText": "GitHub"
     }
   },
   "contact": {
-    "title": "Contact",
-    "body": "If you'd like to discuss a role or collaboration, feel free to reach out via email, LinkedIn, WhatsApp, or phone.",
+    "title": "Let's connect!",
+    "body": "I'm currently open to remote developer roles in my stack.\n\nIf you'd like to discuss a role or collaboration, you can reach me via email, LinkedIn, WhatsApp, or phone. I usually respond within 24 hours.",
     "linkedinProfile": "https://www.linkedin.com/in/avi-koenig/",
     "email": "avi@koenig.co.il",
     "emailLabel": "Email",
     "emailAddress": "avi@koenig.co.il",
     "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
     "whatsappLabel": "WhatsApp",
     "whatsappMessage": "Hi, I'd like to discuss a potential role or collaboration.",
     "phone": "+972 54-691-2072",

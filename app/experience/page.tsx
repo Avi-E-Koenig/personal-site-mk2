@@ -181,6 +181,25 @@ export default async function Experience() {
               {t('summary.closing')}
             </p>
           </section>
+
+          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
+              <SectionHeadingMarker />
+              {t('github.title')}
+            </h2>
+            <p className="text-base text-text-secondary leading-relaxed">
+              {t('github.text')}{' '}
+              <a
+                href="https://github.com/Avi-E-Koenig"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link text-accent-500 hover:text-accent-600"
+              >
+                {t('github.linkText')}
+              </a>
+              .
+            </p>
+          </section>
         </div>
       </div>
     </div>

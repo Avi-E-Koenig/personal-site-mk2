@@ -50,9 +50,12 @@ export default function Navigation() {
                 )}
               >
                 {item.label}
-                {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-text-primary" />
-                )}
+                <span 
+                  className={cn(
+                    'absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-300 ease-in-out',
+                    isActive(item.href) ? 'w-full' : 'w-0'
+                  )} 
+                />
               </Link>
             ))}
           </div>
