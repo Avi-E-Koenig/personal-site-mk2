@@ -31,7 +31,7 @@ export default function Navigation() {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <nav className="border-b border-border-default bg-background-paper">
+    <nav className="sticky top-0 z-50 border-b border-border-default bg-background-paper">
       <div className="container-content">
         <div className="flex items-center justify-between h-16">
           {/* Desktop Navigation */}
