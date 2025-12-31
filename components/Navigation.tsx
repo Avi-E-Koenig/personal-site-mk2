@@ -16,8 +16,8 @@ export default function Navigation() {
     { href: '/', label: t('home') },
     { href: '/mindset', label: t('mindset') },
     { href: '/experience', label: t('experience') },
-    { href: '/resume', label: t('resume') },
     { href: '/contact', label: t('contact') },
+    { href: '/resume', label: t('resume') },
   ]
 
   const isActive = (href: string) => {
@@ -35,29 +35,47 @@ export default function Navigation() {
       <div className="container-content">
         <div className="flex items-center justify-between h-16">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'text-sm font-medium',
-                  'transition-colors duration-200',
-                  'relative',
-                  isActive(item.href)
-                    ? 'text-text-primary font-semibold'
-                    : 'text-text-secondary hover:text-text-primary'
-                )}
-              >
-                {item.label}
-                <span 
+          <div className="hidden md:flex items-center gap-6">
+            {navItems.map((item) => {
+              const isResume = item.href === '/resume'
+              if (isResume) {
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      'btn-primary text-sm px-4',
+                      'transition-all duration-200',
+                      isActive(item.href) && 'ring-2 ring-accent-300'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
                   className={cn(
-                    'absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-300 ease-in-out',
-                    isActive(item.href) ? 'w-full' : 'w-0'
-                  )} 
-                />
-              </Link>
-            ))}
+                    'text-sm font-medium',
+                    'transition-colors duration-200',
+                    'relative',
+                    isActive(item.href)
+                      ? 'text-text-primary font-semibold'
+                      : 'text-text-secondary hover:text-text-primary'
+                  )}
+                >
+                  {item.label}
+                  <span 
+                    className={cn(
+                      'absolute bottom-0 left-0 h-0.5 bg-accent-500 transition-all duration-300 ease-in-out',
+                      isActive(item.href) ? 'w-full' : 'w-0'
+                    )} 
+                  />
+                </Link>
+              )
+            })}
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}
@@ -94,23 +112,28 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border-default">
             <div className="py-4 space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={closeMenu}
-                  className={cn(
-                    'block px-4 py-3 rounded-md',
-                    'transition-colors duration-200',
-                    'text-base font-medium',
-                    isActive(item.href)
-                      ? 'text-text-primary font-semibold bg-background-secondary'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isResume = item.href === '/resume'
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className={cn(
+                      'block px-4 py-3 rounded-md',
+                      'transition-colors duration-200',
+                      'text-base font-medium',
+                      isResume
+                        ? 'btn-primary text-center'
+                        : isActive(item.href)
+                        ? 'text-text-primary font-semibold bg-background-secondary'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
             </div>
           </div>
         )}
