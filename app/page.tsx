@@ -39,10 +39,13 @@ export default async function Home() {
         <section className="mb-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src="/assets/profile-pic.jpg"
                 alt={t('hero.name')}
+                width={160}
+                height={160}
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-border-default shadow-lg"
+                priority
               />
             </div>
             <div className="flex-1">
