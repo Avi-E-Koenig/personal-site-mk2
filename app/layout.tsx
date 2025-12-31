@@ -22,6 +22,9 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   title: 'Avi Koenig - Senior Backend-Oriented Full-Stack Developer',
   description: 'Senior backend-oriented full-stack developer specializing in understanding, stabilizing, and safely evolving existing production systems under real-world constraints.',
+  icons: {
+    icon: '/assets/site.ico',
+  },
 }
 
 export default async function RootLayout({

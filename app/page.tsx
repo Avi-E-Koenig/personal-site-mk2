@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { getTranslations } from '@/lib/i18n/translations'
 import SectionHeadingMarker from '@/components/SectionHeadingMarker'
 
@@ -36,12 +37,23 @@ export default async function Home() {
       <div className="container-content">
         {/* Hero */}
         <section className="mb-6">
-          <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-2">
-            {t('hero.name')}
-          </h1>
-          <p className="text-lg sm:text-xl text-accent-500 mb-3 font-bold">
-            {t('hero.title')}
-          </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
+            <div className="flex-shrink-0">
+              <img
+                src="/assets/profile-pic.jpg"
+                alt={t('hero.name')}
+                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-border-default shadow-lg"
+              />
+            </div>
+            <div className="flex-1">
+              <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-2">
+                {t('hero.name')}
+              </h1>
+              <p className="text-lg sm:text-xl text-accent-500 mb-3 font-bold">
+                {t('hero.title')}
+              </p>
+            </div>
+          </div>
           <p className="text-sm sm:text-base text-text-muted max-w-2xl px-4 sm:px-0 mt-4">
             {t('hero.tagline')}
           </p>
