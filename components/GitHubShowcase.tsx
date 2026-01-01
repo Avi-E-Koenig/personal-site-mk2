@@ -1,7 +1,6 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import { Github, ExternalLink, Star } from 'lucide-react'
+import { Code, ExternalLink, Star } from 'lucide-react'
 
 interface Repo {
   name: string
@@ -12,7 +11,6 @@ interface Repo {
 }
 
 export default function GitHubShowcase() {
-  const t = useTranslations('home')
 
   // Static repository highlights - can be replaced with API calls later
   const repos: Repo[] = [
@@ -48,7 +46,7 @@ export default function GitHubShowcase() {
         >
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center gap-2">
-              <Github className="w-5 h-5 text-text-secondary" />
+              <Code className="w-5 h-5 text-text-secondary" />
               <h3 className="text-lg font-semibold text-text-primary group-hover:text-accent-600 transition-colors">
                 {repo.name}
               </h3>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
-import { Linkedin, Github, MessageCircle, Mail, Phone } from 'lucide-react'
+import { Linkedin, Code, MessageCircle, Mail, Phone } from 'lucide-react'
 
 interface ContactLinksProps {
   variant?: 'footer' | 'page'
@@ -38,7 +38,7 @@ export default function ContactLinks({
       value: 'GitHub',
       title: 'GitHub profile', 
       external: true,
-      icon: Github,
+      icon: Code,
       color: 'text-gray-700',
       bgColor: 'bg-gray-50',
       borderColor: 'border-gray-200',
