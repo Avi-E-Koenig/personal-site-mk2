@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import { getTranslations } from '@/lib/i18n/translations'
-import SectionHeadingMarker from '@/components/SectionHeadingMarker'
+import { Lightbulb, ChevronsLeftRight } from 'lucide-react'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('mindset')
-  
+
   const title = `${t('title')} - Avi Koenig`
   const description = t('subtitle')
-  
+
   return {
     title,
     description,
@@ -34,7 +34,7 @@ export default async function Mindset() {
   return (
     <div className="section">
       <div className="container-content">
-        <header className="mb-section-normal">
+        <header className="mb-6">
           <h1 className="text-h1 md:text-h1-md text-text-primary font-semibold mb-4">
             {t('title')}
           </h1>
@@ -44,9 +44,22 @@ export default async function Mindset() {
         </header>
 
         <div className="space-y-section-tight">
+
+          {/* Closing */}
+          <section className="bg-accent-50 border border-border-default rounded-lg p-4 sm:p-6">
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-lg bg-background-paper text-amber-600 flex-shrink-0">
+                <Lightbulb className="w-6 h-6 text-accent-500" />
+              </div>
+              <p className="text-lg text-text-secondary leading-relaxed">
+                {t('experience.closing')}
+              </p>
+            </div>
+          </section>
+
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('understanding.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -59,7 +72,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('behavior.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -72,7 +85,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('refactoring.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -88,7 +101,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('ai.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -104,7 +117,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('constraints.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -123,7 +136,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('ownership.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed mb-4">
@@ -138,7 +151,7 @@ export default async function Mindset() {
 
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('adapting.title')}
             </h2>
             <p className="text-base text-text-secondary leading-relaxed">
@@ -146,21 +159,10 @@ export default async function Mindset() {
             </p>
           </section>
 
-          {/* Experience Patterns Section */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
-              {t('experience.title')}
-            </h2>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              {t('experience.intro')}
-            </p>
-          </section>
-
           {/* Pattern 1 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('experience.pattern1.title')}
             </h2>
             <div className="space-y-4">
@@ -194,7 +196,7 @@ export default async function Mindset() {
           {/* Pattern 2 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('experience.pattern2.title')}
             </h2>
             <div className="space-y-4">
@@ -228,7 +230,7 @@ export default async function Mindset() {
           {/* Pattern 3 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('experience.pattern3.title')}
             </h2>
             <div className="space-y-4">
@@ -262,7 +264,7 @@ export default async function Mindset() {
           {/* Pattern 4 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('experience.pattern4.title')}
             </h2>
             <div className="space-y-4">
@@ -296,7 +298,7 @@ export default async function Mindset() {
           {/* Pattern 5 */}
           <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
-              <SectionHeadingMarker />
+              <ChevronsLeftRight className="text-accent-500" />
               {t('experience.pattern5.title')}
             </h2>
             <div className="space-y-4">
@@ -325,13 +327,6 @@ export default async function Mindset() {
                 </p>
               </div>
             </div>
-          </section>
-
-          {/* Closing */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
-            <p className="text-lg text-text-secondary leading-relaxed">
-              {t('experience.closing')}
-            </p>
           </section>
         </div>
       </div>

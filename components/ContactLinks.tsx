@@ -1,7 +1,8 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
-import { Linkedin, Code, MessageCircle, Mail, Phone } from 'lucide-react'
+import { Code, MessageCircle, Mail, Phone } from 'lucide-react'
+import LinkedInIcon from '@/components/LinkedInIcon'
 
 interface ContactLinksProps {
   variant?: 'footer' | 'page'
@@ -27,7 +28,7 @@ export default function ContactLinks({
       value: 'LinkedIn',
       title: 'LinkedIn profile', 
       external: true,
-      icon: Linkedin,
+      icon: LinkedInIcon,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
@@ -82,20 +83,24 @@ export default function ContactLinks({
     const separatorClasses = 'text-text-muted hidden sm:inline'
 
     return (
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        {links.map((link, index) => (
-          <span key={link.href} className="contents">
-            {index > 0 && <span className={separatorClasses}>|</span>}
-            <a
-              href={link.href}
-              className={linkClasses}
-              title={link.title}
-              {...(link.external && { target: '_blank', rel: 'noopener noreferrer' })}
-            >
-              {link.label}
-            </a>
-          </span>
-        ))}
+      <div className="flex flex-row flex-wrap sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        {links.map((link, index) => {
+          const Icon = link.icon
+          return (
+            <span key={link.href} className="contents">
+              {index > 0 && <span className={separatorClasses}>|</span>}
+              <a
+                href={link.href}
+                className={linkClasses}
+                title={link.title}
+                {...(link.external && { target: '_blank', rel: 'noopener noreferrer' })}
+              >
+                <Icon className="w-5 h-5 sm:hidden" />
+                <span className="hidden sm:inline">{link.label}</span>
+              </a>
+            </span>
+          )
+        })}
       </div>
     )
   }

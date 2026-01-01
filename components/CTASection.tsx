@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { Download, Mail, Linkedin } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
+import LinkedInIcon from '@/components/LinkedInIcon'
 
 export default function CTASection() {
   const t = useTranslations('home.cta')
@@ -29,7 +30,7 @@ export default function CTASection() {
         rel="noopener noreferrer"
         className="btn-secondary flex items-center justify-center gap-2"
       >
-        <Linkedin className="w-5 h-5" />
+        <LinkedInIcon className="w-5 h-5 text-blue-600" />
         {t('linkedin')}
       </a>
     </div>

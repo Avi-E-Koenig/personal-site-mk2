@@ -11,7 +11,18 @@
       "name": "Hi! I'm Avi Koenig",
       "title": "Senior Backend-Oriented Full-Stack Developer",
       "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints.",
-      "credibility": "7+ years across product teams and consulting, focused on internal systems and legacy modernization."
+      "credibility": {
+        "years": "9+ years",
+        "connector1": " across ",
+        "product": "product",
+        "connector2": " teams and ",
+        "consulting": "consulting",
+        "connector3": ", focused on ",
+        "internalSystems": "internal systems",
+        "connector4": " and ",
+        "legacyModernization": "legacy modernization",
+        "end": "."
+      }
     },
     "snapshot": {
       "title": "Quick Snapshot",
@@ -31,6 +42,9 @@
       "item1": "Understand system behavior before refactoring",
       "item2": "Improve incrementally with safeguards (tests, documentation, controlled change)",
       "item3": "Balance technical quality with delivery constraints and long-term maintainability"
+    },
+    "githubShowcase": {
+      "title": "Code & Projects"
     },
     "cta": {
       "resume": "Resume (PDF)",
@@ -235,7 +249,7 @@
   "experience": {
     "title": "Experience",
     "subtitle": "Practical experience with real systems, not just ideal ones",
-    "intro": "Most of my professional experience has been working on existing production systems: often internal tools, CRMs, dashboards, and operational platforms that had already accumulated complexity over time. This includes both product roles and consulting work, where I was brought in to extend, stabilize, refactor, or unblock systems that were already in active use. Below is a representative overview of the kinds of environments I've worked in and the responsibilities I typically take on.",
+    "intro": "Most of my professional experience has been working on existing production systems: often internal tools, CRMs, dashboards, and operational platforms that had already accumulated complexity over time. This includes both product roles and consulting work, where I was brought in to extend, stabilize, refactor, or unblock systems that were already in active use. Below is an overview of the kinds of environments I've worked in and the responsibilities I typically take on.",
     "existingSystems": {
       "title": "Working with Production Systems",
       "intro": "I have extensive experience joining projects after initial development, where systems already have:",
