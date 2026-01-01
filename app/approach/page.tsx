@@ -98,15 +98,16 @@ export default async function Approach() {
                     </h3>
                     <div className="text-base text-text-secondary leading-relaxed space-y-3">
                       <p>{t(`corePrinciples.${principle.key}.content`)}</p>
-                      {t(`corePrinciples.${principle.key}.items`, { returnObjects: true }) && (
-                        <ul className="list-disc list-inside space-y-2 mt-3">
-                          {(t(`corePrinciples.${principle.key}.items`, { returnObjects: true }) as string[]).map(
-                            (item: string, itemIndex: number) => (
+                      {(() => {
+                        const items = t(`corePrinciples.${principle.key}.items`)
+                        return Array.isArray(items) && items.length > 0 ? (
+                          <ul className="list-disc list-inside space-y-2 mt-3">
+                            {items.map((item: string, itemIndex: number) => (
                               <li key={itemIndex}>{item}</li>
-                            )
-                          )}
-                        </ul>
-                      )}
+                            ))}
+                          </ul>
+                        ) : null
+                      })()}
                       {t(`corePrinciples.${principle.key}.closing`) && (
                         <p>{t(`corePrinciples.${principle.key}.closing`)}</p>
                       )}
@@ -127,15 +128,16 @@ export default async function Approach() {
             </h2>
             <div className="text-base text-text-secondary leading-relaxed space-y-3">
               <p>{t('benefitsTeams.content')}</p>
-              {t('benefitsTeams.items', { returnObjects: true }) && (
-                <ul className="list-disc list-inside space-y-2 mt-3">
-                  {(t('benefitsTeams.items', { returnObjects: true }) as string[]).map(
-                    (item: string, itemIndex: number) => (
+              {(() => {
+                const items = t('benefitsTeams.items')
+                return Array.isArray(items) && items.length > 0 ? (
+                  <ul className="list-disc list-inside space-y-2 mt-3">
+                    {items.map((item: string, itemIndex: number) => (
                       <li key={itemIndex}>{item}</li>
-                    )
-                  )}
-                </ul>
-              )}
+                    ))}
+                  </ul>
+                ) : null
+              })()}
             </div>
           </section>
 
@@ -149,15 +151,16 @@ export default async function Approach() {
             </h2>
             <div className="text-base text-text-secondary leading-relaxed space-y-3">
               <p>{t('inShort.content')}</p>
-              {t('inShort.items', { returnObjects: true }) && (
-                <ul className="list-disc list-inside space-y-2 mt-3">
-                  {(t('inShort.items', { returnObjects: true }) as string[]).map(
-                    (item: string, itemIndex: number) => (
+              {(() => {
+                const items = t('inShort.items')
+                return Array.isArray(items) && items.length > 0 ? (
+                  <ul className="list-disc list-inside space-y-2 mt-3">
+                    {items.map((item: string, itemIndex: number) => (
                       <li key={itemIndex}>{item}</li>
-                    )
-                  )}
-                </ul>
-              )}
+                    ))}
+                  </ul>
+                ) : null
+              })()}
               {t('inShort.closing') && (
                 <p>{t('inShort.closing')}</p>
               )}
