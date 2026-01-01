@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { TrendingUp, Code, Database, Users } from 'lucide-react'
 
 interface Metric {
@@ -10,30 +11,31 @@ interface Metric {
 }
 
 export default function MetricsSection() {
+  const t = useTranslations('home.metrics')
 
   const metrics: Metric[] = [
     {
       icon: TrendingUp,
-      value: '7+',
-      label: 'Years Experience',
+      value: t('yearsExperience.value'),
+      label: t('yearsExperience.label'),
       color: 'text-accent-600',
     },
     {
       icon: Code,
-      value: '50+',
-      label: 'Systems Improved',
+      value: t('systemsImproved.value'),
+      label: t('systemsImproved.label'),
       color: 'text-blue-600',
     },
     {
       icon: Database,
-      value: '5+',
-      label: 'Database Types',
+      value: t('databaseTypes.value'),
+      label: t('databaseTypes.label'),
       color: 'text-green-600',
     },
     {
       icon: Users,
-      value: '100%',
-      label: 'Remote Ready',
+      value: t('remoteReady.value'),
+      label: t('remoteReady.label'),
       color: 'text-purple-600',
     },
   ]

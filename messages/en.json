@@ -36,6 +36,24 @@
       "resume": "Resume (PDF)",
       "contact": "Contact",
       "linkedin": "LinkedIn"
+    },
+    "metrics": {
+      "yearsExperience": {
+        "value": "9+",
+        "label": "Years Experience"
+      },
+      "systemsImproved": {
+        "value": "50+",
+        "label": "Systems Improved"
+      },
+      "databaseTypes": {
+        "value": "5+",
+        "label": "Database Types"
+      },
+      "remoteReady": {
+        "value": "100%",
+        "label": "Remote Ready"
+      }
     }
   },
   "howIWork": {

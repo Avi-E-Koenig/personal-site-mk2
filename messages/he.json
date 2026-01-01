@@ -36,6 +36,24 @@
       "resume": "קורות חיים (PDF)",
       "contact": "יצירת קשר",
       "linkedin": "לינקדאין"
+    },
+    "metrics": {
+      "yearsExperience": {
+        "value": "9+",
+        "label": "שנות ניסיון"
+      },
+      "systemsImproved": {
+        "value": "50+",
+        "label": "מערכות משופרות"
+      },
+      "databaseTypes": {
+        "value": "5+",
+        "label": "סוגי מסדי נתונים"
+      },
+      "remoteReady": {
+        "value": "100%",
+        "label": "זמין לעבודה מרחוק"
+      }
     }
   },
   "howIWork": {
