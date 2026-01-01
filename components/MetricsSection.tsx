@@ -1,6 +1,5 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
 import { TrendingUp, Code, Database, Users } from 'lucide-react'
 
 interface Metric {
@@ -11,7 +10,6 @@ interface Metric {
 }
 
 export default function MetricsSection() {
-  const t = useTranslations('home')
 
   const metrics: Metric[] = [
     {
