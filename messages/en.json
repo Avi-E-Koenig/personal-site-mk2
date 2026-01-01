@@ -1,8 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "mindset": "Mindset",
-    "experience": "Experience",
+    "approach": "Approach",
     "resume": "Resume",
     "contact": "Contact"
   },
@@ -334,6 +333,105 @@
     "whatsappMessage": "Hi, I'd like to discuss a potential role or collaboration.",
     "phone": "+972 54-691-2072",
     "phoneLabel": "Phone"
+  },
+  "approach": {
+    "title": "Engineering Mindset & Professional Approach",
+    "subtitle": "A focus on clarity, risk reduction, and long-term system health.",
+    "intro": "I approach software engineering with a focus on clarity, risk reduction, and long-term system health. My work is shaped less by trends and more by responsibility to real users, real data, and real production systems. This mindset is the foundation behind every role I take on.",
+    "corePrinciples": {
+      "title": "Core Principles",
+      "principle1": {
+        "title": "Understand Before You Change",
+        "content": "Before writing new code, I prioritize understanding:",
+        "items": [
+          "How the system behaves in production",
+          "Which parts are fragile or business-critical",
+          "Why things were built the way they were"
+        ],
+        "closing": "This avoids breaking hidden dependencies and allows changes to be intentional and safe, not reactive."
+      },
+      "principle2": {
+        "title": "Stability Over Elegance",
+        "content": "Clean code matters — but correct behavior matters more.",
+        "items": [
+          "Predictable outcomes",
+          "Explicit logic",
+          "Boring, reliable solutions"
+        ],
+        "closing": "Refactoring is done incrementally, backed by tests or safeguards, never as a risky rewrite."
+      },
+      "principle3": {
+        "title": "Work With Reality, Not Ideals",
+        "content": "Most of my experience is with live systems:",
+        "items": [
+          "Legacy codebases",
+          "Partial documentation",
+          "Time pressure",
+          "Business constraints"
+        ],
+        "closing": "I'm comfortable improving systems as they are, not waiting for perfect conditions."
+      },
+      "principle4": {
+        "title": "Incremental Improvement Beats Big Rewrites",
+        "content": "Large rewrites are expensive and risky. I prefer:",
+        "items": [
+          "Small, reversible steps",
+          "Isolated improvements",
+          "Measurable impact"
+        ],
+        "closing": "This keeps production stable while steadily raising quality."
+      },
+      "principle5": {
+        "title": "Ownership Means Leaving Things Better",
+        "content": "I treat ownership as:",
+        "items": [
+          "Making systems easier to reason about",
+          "Reducing cognitive load for the next developer",
+          "Adding clarity through structure, naming, and documentation"
+        ],
+        "closing": "Code should outlive its author."
+      },
+      "principle6": {
+        "title": "Backend & Data First Thinking",
+        "content": "My strength is in backend-heavy, data-driven systems, where:",
+        "items": [
+          "Business rules matter",
+          "Data correctness matters",
+          "Edge cases matter"
+        ],
+        "closing": "Dashboards, CRMs, APIs, internal tools — systems where mistakes have real consequences."
+      },
+      "principle7": {
+        "title": "AI as an Accelerator, Not a Crutch",
+        "content": "I use AI to:",
+        "items": [
+          "Speed up exploration",
+          "Reduce boilerplate",
+          "Improve iteration"
+        ],
+        "closing": "But responsibility for correctness, architecture, and decisions always stays with me."
+      }
+    },
+    "benefitsTeams": {
+      "title": "How This Benefits Teams",
+      "content": "Teams I work with get someone who:",
+      "items": [
+        "Reduces production risk",
+        "Brings calm, structured reasoning into complex systems",
+        "Improves stability without blocking delivery",
+        "Helps others understand why things work, not just how"
+      ]
+    },
+    "inShort": {
+      "title": "In Short",
+      "content": "I'm not driven by hype or novelty.\n\nI'm driven by:",
+      "items": [
+        "Systems that don't surprise you",
+        "Code that can be safely changed",
+        "Teams that can move forward without fear"
+      ],
+      "closing": "That mindset has guided my experience — and it's what I bring to every role."
+    }
   },
   "resume": {
     "title": "Resume",

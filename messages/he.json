@@ -1,8 +1,7 @@
 {
   "nav": {
     "home": "בית",
-    "mindset": "גישה",
-    "experience": "ניסיון",
+    "approach": "גישה",
     "resume": "קורות חיים",
     "contact": "יצירת קשר"
   },
@@ -334,6 +333,105 @@
     "whatsappMessage": "שלום, אני מעוניין לשוחח על תפקיד או שיתוף פעולה פוטנציאלי.",
     "phone": "+972 54-691-2072",
     "phoneLabel": "טלפון"
+  },
+  "approach": {
+    "title": "TODO: Translate - Engineering Mindset & Professional Approach",
+    "subtitle": "TODO: Translate - A focus on clarity, risk reduction, and long-term system health.",
+    "intro": "TODO: Translate - I approach software engineering with a focus on clarity, risk reduction, and long-term system health. My work is shaped less by trends and more by responsibility to real users, real data, and real production systems. This mindset is the foundation behind every role I take on.",
+    "corePrinciples": {
+      "title": "TODO: Translate - Core Principles",
+      "principle1": {
+        "title": "TODO: Translate - Understand Before You Change",
+        "content": "TODO: Translate - Before writing new code, I prioritize understanding:",
+        "items": [
+          "TODO: Translate - How the system behaves in production",
+          "TODO: Translate - Which parts are fragile or business-critical",
+          "TODO: Translate - Why things were built the way they were"
+        ],
+        "closing": "TODO: Translate - This avoids breaking hidden dependencies and allows changes to be intentional and safe, not reactive."
+      },
+      "principle2": {
+        "title": "TODO: Translate - Stability Over Elegance",
+        "content": "TODO: Translate - Clean code matters — but correct behavior matters more.",
+        "items": [
+          "TODO: Translate - Predictable outcomes",
+          "TODO: Translate - Explicit logic",
+          "TODO: Translate - Boring, reliable solutions"
+        ],
+        "closing": "TODO: Translate - Refactoring is done incrementally, backed by tests or safeguards, never as a risky rewrite."
+      },
+      "principle3": {
+        "title": "TODO: Translate - Work With Reality, Not Ideals",
+        "content": "TODO: Translate - Most of my experience is with live systems:",
+        "items": [
+          "TODO: Translate - Legacy codebases",
+          "TODO: Translate - Partial documentation",
+          "TODO: Translate - Time pressure",
+          "TODO: Translate - Business constraints"
+        ],
+        "closing": "TODO: Translate - I'm comfortable improving systems as they are, not waiting for perfect conditions."
+      },
+      "principle4": {
+        "title": "TODO: Translate - Incremental Improvement Beats Big Rewrites",
+        "content": "TODO: Translate - Large rewrites are expensive and risky. I prefer:",
+        "items": [
+          "TODO: Translate - Small, reversible steps",
+          "TODO: Translate - Isolated improvements",
+          "TODO: Translate - Measurable impact"
+        ],
+        "closing": "TODO: Translate - This keeps production stable while steadily raising quality."
+      },
+      "principle5": {
+        "title": "TODO: Translate - Ownership Means Leaving Things Better",
+        "content": "TODO: Translate - I treat ownership as:",
+        "items": [
+          "TODO: Translate - Making systems easier to reason about",
+          "TODO: Translate - Reducing cognitive load for the next developer",
+          "TODO: Translate - Adding clarity through structure, naming, and documentation"
+        ],
+        "closing": "TODO: Translate - Code should outlive its author."
+      },
+      "principle6": {
+        "title": "TODO: Translate - Backend & Data First Thinking",
+        "content": "TODO: Translate - My strength is in backend-heavy, data-driven systems, where:",
+        "items": [
+          "TODO: Translate - Business rules matter",
+          "TODO: Translate - Data correctness matters",
+          "TODO: Translate - Edge cases matter"
+        ],
+        "closing": "TODO: Translate - Dashboards, CRMs, APIs, internal tools — systems where mistakes have real consequences."
+      },
+      "principle7": {
+        "title": "TODO: Translate - AI as an Accelerator, Not a Crutch",
+        "content": "TODO: Translate - I use AI to:",
+        "items": [
+          "TODO: Translate - Speed up exploration",
+          "TODO: Translate - Reduce boilerplate",
+          "TODO: Translate - Improve iteration"
+        ],
+        "closing": "TODO: Translate - But responsibility for correctness, architecture, and decisions always stays with me."
+      }
+    },
+    "benefitsTeams": {
+      "title": "TODO: Translate - How This Benefits Teams",
+      "content": "TODO: Translate - Teams I work with get someone who:",
+      "items": [
+        "TODO: Translate - Reduces production risk",
+        "TODO: Translate - Brings calm, structured reasoning into complex systems",
+        "TODO: Translate - Improves stability without blocking delivery",
+        "TODO: Translate - Helps others understand why things work, not just how"
+      ]
+    },
+    "inShort": {
+      "title": "TODO: Translate - In Short",
+      "content": "TODO: Translate - I'm not driven by hype or novelty.\n\nI'm driven by:",
+      "items": [
+        "TODO: Translate - Systems that don't surprise you",
+        "TODO: Translate - Code that can be safely changed",
+        "TODO: Translate - Teams that can move forward without fear"
+      ],
+      "closing": "TODO: Translate - That mindset has guided my experience — and it's what I bring to every role."
+    }
   },
   "resume": {
     "title": "קורות חיים",
