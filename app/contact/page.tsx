@@ -43,7 +43,7 @@ export default async function Contact() {
           </p>
         </header>
 
-        <div className="space-y-4">
+        <div className="card p-6 sm:p-8">
           <ContactLinks variant="page" />
         </div>
       </div>

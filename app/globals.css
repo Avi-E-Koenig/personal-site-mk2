@@ -6,6 +6,32 @@
   :root {
     --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
     --font-heebo: 'Heebo', 'Assistant', system-ui, sans-serif;
+
+    /* Light theme — corporate-clean default (RGB triplets) */
+    --bg-primary: 250 250 250;
+    --bg-secondary: 244 244 245;
+    --bg-paper: 255 255 255;
+    --text-primary: 24 24 27;
+    --text-secondary: 63 63 70;
+    --text-muted: 90 90 96;
+    --text-inverse: 255 255 255;
+    --border-default: 228 228 231;
+    --border-subtle: 240 240 242;
+    --border-accent: 209 213 219;
+  }
+
+  .dark {
+    /* Dark theme — clean, cool slate; not neon */
+    --bg-primary: 14 16 21;
+    --bg-secondary: 21 24 31;
+    --bg-paper: 24 27 35;
+    --text-primary: 244 245 247;
+    --text-secondary: 189 194 203;
+    --text-muted: 148 155 168;
+    --text-inverse: 255 255 255;
+    --border-default: 42 46 57;
+    --border-subtle: 32 35 44;
+    --border-accent: 58 65 80;
   }
 
   html {
@@ -13,62 +39,75 @@
   }
 
   body {
-    @apply bg-background-primary text-text-primary font-sans;
-    @apply antialiased;
+    @apply bg-background-primary text-text-primary font-sans antialiased;
   }
 
-  /* RTL support */
   [dir='rtl'] {
     direction: rtl;
   }
 }
 
 @layer components {
-  /* Link styles */
+  /* Links */
   .link {
-    @apply text-accent-500 hover:text-accent-600 underline-offset-4;
-    @apply transition-colors duration-200;
+    @apply text-accent-600 dark:text-accent-400 underline-offset-4 transition-colors duration-200;
   }
-
   .link:hover {
     @apply underline;
   }
 
-  /* Button styles - Mobile optimized */
+  /* Buttons — mobile-optimized, 44px touch targets */
   .btn-primary {
-    @apply bg-accent-500 hover:bg-accent-600 text-text-inverse;
-    @apply px-6 py-3 rounded-md font-medium;
+    @apply inline-flex items-center justify-center gap-2;
+    @apply bg-accent-600 hover:bg-accent-700 text-text-inverse;
+    @apply px-6 py-3 rounded-lg font-medium;
     @apply transition-colors duration-200;
-    @apply focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
-    @apply min-h-[44px] min-w-[44px]; /* Touch target size */
-    @apply w-full sm:w-auto; /* Full width on mobile */
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary;
+    @apply min-h-[44px];
   }
 
   .btn-secondary {
-    @apply bg-transparent border border-border-default text-text-primary;
-    @apply px-6 py-3 rounded-md font-medium;
-    @apply hover:bg-background-secondary transition-colors duration-200;
-    @apply focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
-    @apply min-h-[44px] min-w-[44px]; /* Touch target size */
-    @apply w-full sm:w-auto; /* Full width on mobile */
+    @apply inline-flex items-center justify-center gap-2;
+    @apply bg-background-paper border border-border-default text-text-primary;
+    @apply px-6 py-3 rounded-lg font-medium;
+    @apply hover:bg-background-secondary hover:border-border-accent transition-colors duration-200;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary;
+    @apply min-h-[44px];
   }
 
-  /* Section wrapper - Responsive spacing */
+  /* Card surface */
+  .card {
+    @apply bg-background-paper border border-border-default rounded-xl shadow-card;
+    @apply transition-all duration-200;
+  }
+  .card-hover {
+    @apply hover:shadow-card-hover hover:border-border-accent;
+  }
+
+  /* Tech / stack chip */
+  .chip {
+    @apply inline-flex items-center rounded-full border border-border-default bg-background-secondary;
+    @apply px-2.5 py-0.5 text-xs font-medium text-text-secondary;
+  }
+
+  /* Section rhythm */
   .section {
-    @apply py-8 md:py-12 lg:py-section-normal;
+    @apply py-10 md:py-14 lg:py-section-normal;
   }
-
   .section-tight {
     @apply py-6 md:py-8 lg:py-section-tight;
-  }
-
-  .section-loose {
-    @apply py-12 md:py-16 lg:py-section-loose;
   }
 
   /* Content container */
   .container-content {
     @apply max-w-content mx-auto px-4 sm:px-6;
   }
-}
+  .container-wide {
+    @apply max-w-wide mx-auto px-4 sm:px-6;
+  }
 
+  /* Eyebrow label */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wider text-accent-600 dark:text-accent-400;
+  }
+}

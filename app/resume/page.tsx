@@ -33,7 +33,7 @@ export default async function Resume() {
   return (
     <div className="section">
       <div className="container-content">
-        <div className="bg-background-paper border border-border-default rounded-lg p-6">
+        <div className="card p-4 sm:p-6">
           <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <h1 className="text-h2 md:text-h2-md text-text-primary font-semibold">
               {t('title')}

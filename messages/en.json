@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "caseStudies": "Case Studies",
     "mindset": "Mindset",
     "experience": "Experience",
     "resume": "Resume",
@@ -11,7 +12,7 @@
       "name": "Hi! I'm Avi Koenig",
       "title": "Senior Backend-Oriented Full-Stack Developer",
       "tagline": "I build and evolve production systems with a focus on correctness, maintainability, and predictable delivery under real-world constraints.",
-      "credibility": "7+ years across product teams and consulting, focused on internal systems and legacy modernization."
+      "credibility": "8+ years across product teams and consulting, focused on internal systems and legacy modernization."
     },
     "snapshot": {
       "title": "Quick Snapshot",

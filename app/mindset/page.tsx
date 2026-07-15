@@ -44,7 +44,7 @@ export default async function Mindset() {
         </header>
 
         <div className="space-y-section-tight">
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('understanding.title')}
@@ -57,7 +57,7 @@ export default async function Mindset() {
             </p>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('behavior.title')}
@@ -70,7 +70,7 @@ export default async function Mindset() {
             </p>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('refactoring.title')}
@@ -86,7 +86,7 @@ export default async function Mindset() {
             </ul>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('ai.title')}
@@ -102,7 +102,7 @@ export default async function Mindset() {
             </p>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('constraints.title')}
@@ -121,7 +121,7 @@ export default async function Mindset() {
             </p>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('ownership.title')}
@@ -136,7 +136,7 @@ export default async function Mindset() {
             </ul>
           </section>
 
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('adapting.title')}
@@ -147,7 +147,7 @@ export default async function Mindset() {
           </section>
 
           {/* Experience Patterns Section */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.title')}
@@ -158,7 +158,7 @@ export default async function Mindset() {
           </section>
 
           {/* Pattern 1 */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.pattern1.title')}
@@ -192,7 +192,7 @@ export default async function Mindset() {
           </section>
 
           {/* Pattern 2 */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.pattern2.title')}
@@ -226,7 +226,7 @@ export default async function Mindset() {
           </section>
 
           {/* Pattern 3 */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.pattern3.title')}
@@ -260,7 +260,7 @@ export default async function Mindset() {
           </section>
 
           {/* Pattern 4 */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.pattern4.title')}
@@ -294,7 +294,7 @@ export default async function Mindset() {
           </section>
 
           {/* Pattern 5 */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <h2 className="text-h2 md:text-h2-md text-text-primary font-semibold mb-4 flex items-center gap-3">
               <SectionHeadingMarker />
               {t('experience.pattern5.title')}
@@ -328,7 +328,7 @@ export default async function Mindset() {
           </section>
 
           {/* Closing */}
-          <section className="bg-background-paper border border-border-default rounded-lg p-4 sm:p-6">
+          <section className="card p-5 sm:p-7">
             <p className="text-lg text-text-secondary leading-relaxed">
               {t('experience.closing')}
             </p>
