@@ -1,42 +1,48 @@
 'use client'
 
-import { setLocaleCookie, locales, type Locale } from '@/lib/i18n/client'
 import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from '@/i18n/navigation'
+import { routing } from '@/i18n/routing'
 
+/**
+ * Deliberately discreet: a small "EN / HE" text toggle rather than a
+ * prominent control. Switches locale on the current route via next-intl
+ * navigation (URL-based: / ↔ /he).
+ */
 export default function LanguageSwitcher() {
   const locale = useLocale()
+  const pathname = usePathname()
   const router = useRouter()
 
-  const handleLocaleChange = (newLocale: Locale) => {
+  const handleLocaleChange = (newLocale: string) => {
     if (newLocale === locale) return
-    
-    setLocaleCookie(newLocale)
-    // Refresh server components without full page reload
-    router.refresh()
+    router.replace(pathname, { locale: newLocale })
   }
 
   return (
-    <div className="flex items-center gap-2 rtl:gap-reverse">
-      {locales.map((loc) => (
-        <button
-          key={loc}
-          onClick={() => handleLocaleChange(loc)}
-          className={`
-            px-4 py-2 text-sm font-medium rounded-md transition-colors
-            min-h-[44px] min-w-[44px]
-            ${
+    <div className="flex items-center text-sm">
+      {routing.locales.map((loc, i) => (
+        <span key={loc} className="flex items-center">
+          {i > 0 && (
+            <span className="text-border-accent" aria-hidden="true">
+              /
+            </span>
+          )}
+          <button
+            type="button"
+            onClick={() => handleLocaleChange(loc)}
+            aria-current={locale === loc ? 'true' : undefined}
+            aria-label={`Switch to ${loc === 'en' ? 'English' : 'Hebrew'}`}
+            className={`px-2 min-h-[40px] rounded transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 ${
               locale === loc
-                ? 'bg-accent-500 text-text-inverse font-semibold ring-2 ring-accent-500 ring-offset-2 ring-offset-background-primary'
-                : 'text-text-secondary hover:text-text-primary hover:bg-background-secondary'
-            }
-          `}
-          aria-label={`Switch to ${loc === 'en' ? 'English' : 'Hebrew'}`}
-        >
-          {loc.toUpperCase()}
-        </button>
+                ? 'text-text-primary font-semibold'
+                : 'text-text-muted hover:text-text-primary'
+            }`}
+          >
+            {loc.toUpperCase()}
+          </button>
+        </span>
       ))}
     </div>
   )
 }
-

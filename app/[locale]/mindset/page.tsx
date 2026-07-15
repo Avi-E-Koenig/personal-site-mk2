@@ -1,35 +1,35 @@
 import type { Metadata } from 'next'
-import { getTranslations } from '@/lib/i18n/translations'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import SectionHeadingMarker from '@/components/SectionHeadingMarker'
+import { localeAlternates } from '@/lib/seo'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
-
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('mindset')
-  
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'mindset' })
   const title = `${t('title')} - Avi Koenig`
   const description = t('subtitle')
-  
+
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      url: `${baseUrl}/mindset`,
-      siteName: 'Avi Koenig',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary',
-      title,
-      description,
-    },
+    alternates: localeAlternates('/mindset', locale),
+    openGraph: { title, description, type: 'website', siteName: 'Avi Koenig' },
+    twitter: { card: 'summary', title, description },
   }
 }
 
-export default async function Mindset() {
-  const t = await getTranslations('mindset')
+export default async function Mindset({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'mindset' })
 
   return (
     <div className="section">

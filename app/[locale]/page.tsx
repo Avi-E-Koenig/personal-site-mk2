@@ -1,21 +1,27 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import { getTranslations } from '@/lib/i18n/translations'
+import { Link } from '@/i18n/navigation'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { caseStudies } from '@/content/case-studies'
+import { localeAlternates } from '@/lib/seo'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/avi-koenig'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('home')
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'home' })
   const title = 'Avi Koenig - Senior Backend-Oriented Full-Stack Developer'
   const description = t('hero.tagline')
 
   return {
     title,
     description,
-    openGraph: { title, description, url: baseUrl, siteName: 'Avi Koenig', type: 'website' },
+    alternates: localeAlternates('', locale),
+    openGraph: { title, description, type: 'website', siteName: 'Avi Koenig' },
     twitter: { card: 'summary', title, description },
   }
 }
@@ -27,8 +33,14 @@ const stats = [
   { value: '100%', label: 'Remote-ready' },
 ]
 
-export default async function Home() {
-  const t = await getTranslations('home')
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'home' })
 
   return (
     <div className="section">

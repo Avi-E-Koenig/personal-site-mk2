@@ -1,21 +1,24 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 import { caseStudies } from '@/content/case-studies'
+import { localeAlternates } from '@/lib/seo'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
-
-export const metadata: Metadata = {
-  title: 'Case Studies — Avi Koenig',
-  description:
-    'Selected, anonymized case studies: building and safely evolving production systems — from a factory-wide MES to legacy modernization and real-time platforms.',
-  openGraph: {
-    title: 'Case Studies — Avi Koenig',
-    description:
-      'Selected, anonymized case studies: building and safely evolving production systems.',
-    url: `${baseUrl}/case-studies`,
-    siteName: 'Avi Koenig',
-    type: 'website',
-  },
-  twitter: { card: 'summary', title: 'Case Studies — Avi Koenig' },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const title = 'Case Studies — Avi Koenig'
+  const description =
+    'Selected, anonymized case studies: building and safely evolving production systems — from a factory-wide MES to legacy modernization and real-time platforms.'
+  return {
+    title,
+    description,
+    alternates: localeAlternates('/case-studies', locale),
+    openGraph: { title, description, type: 'website', siteName: 'Avi Koenig' },
+    twitter: { card: 'summary', title },
+  }
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -27,7 +30,13 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   )
 }
 
-export default function CaseStudiesPage() {
+export default async function CaseStudiesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
   return (
     <div className="section">
       <div className="container-content">
