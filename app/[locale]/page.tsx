@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { caseStudies } from '@/content/case-studies'
+import { localizedCaseStudies } from '@/content/case-studies'
 import { localeAlternates } from '@/lib/seo'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/avi-koenig'
@@ -26,13 +26,6 @@ export async function generateMetadata({
   }
 }
 
-const stats = [
-  { value: '8+', label: 'Years building production systems' },
-  { value: '~50', label: 'People on the platform I built' },
-  { value: '3', label: 'Database ecosystems (Oracle · MSSQL · Mongo)' },
-  { value: '100%', label: 'Remote-ready' },
-]
-
 export default async function Home({
   params,
 }: {
@@ -41,6 +34,15 @@ export default async function Home({
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'home' })
+  const tc = await getTranslations({ locale, namespace: 'common' })
+  const caseStudies = localizedCaseStudies(locale)
+
+  const stats = [
+    { value: '8+', label: t('stats.years') },
+    { value: '~50', label: t('stats.people') },
+    { value: '3', label: t('stats.databases') },
+    { value: '100%', label: t('stats.remote') },
+  ]
 
   return (
     <div className="section">
@@ -58,13 +60,13 @@ export default async function Home({
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/resume" className="btn-primary">
-                Résumé
+                {tc('resume')}
               </Link>
               <Link href="/contact" className="btn-secondary">
-                Get in touch
+                {tc('getInTouch')}
               </Link>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                LinkedIn
+                {tc('linkedin')}
               </a>
             </div>
           </div>
@@ -94,11 +96,11 @@ export default async function Home({
         <section className="mt-16">
           <div className="flex items-end justify-between mb-6">
             <div>
-              <p className="eyebrow mb-1">Selected work</p>
-              <h2 className="text-h2 md:text-h2-md text-text-primary">Case Studies</h2>
+              <p className="eyebrow mb-1">{t('selectedWork.eyebrow')}</p>
+              <h2 className="text-h2 md:text-h2-md text-text-primary">{t('selectedWork.title')}</h2>
             </div>
             <Link href="/case-studies" className="link text-sm font-medium shrink-0">
-              View all →
+              {tc('viewAll')} →
             </Link>
           </div>
 
@@ -112,7 +114,11 @@ export default async function Home({
                 }`}
               >
                 <div className="flex items-center gap-2 mb-2">
-                  {cs.featured && <span className="chip border-accent-500/40 text-accent-600 dark:text-accent-400">Flagship</span>}
+                  {cs.featured && (
+                    <span className="chip border-accent-500/40 text-accent-600 dark:text-accent-400">
+                      {tc('flagship')}
+                    </span>
+                  )}
                   <span className="text-xs font-medium text-text-muted">{cs.role}</span>
                 </div>
                 <h3 className="text-h3 text-text-primary group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
