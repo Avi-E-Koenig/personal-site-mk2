@@ -65,6 +65,9 @@ export default async function Home({
               <Link href="/contact" className="btn-secondary">
                 {tc('getInTouch')}
               </Link>
+              <Link href="/services" className="btn-secondary">
+                {tc('workWithMe')}
+              </Link>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                 {tc('linkedin')}
               </a>

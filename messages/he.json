@@ -2,6 +2,7 @@
   "nav": {
     "home": "בית",
     "caseStudies": "עבודות",
+    "services": "שירותים",
     "mindset": "גישה",
     "resume": "קורות חיים",
     "contact": "יצירת קשר"
@@ -11,7 +12,8 @@
     "getInTouch": "יצירת קשר",
     "linkedin": "לינקדאין",
     "viewAll": "לכל העבודות",
-    "flagship": "הפרויקט המרכזי"
+    "flagship": "הפרויקט המרכזי",
+    "workWithMe": "בואו נעבוד יחד"
   },
   "home": {
     "hero": {
@@ -207,5 +209,20 @@
     "title": "קורות חיים",
     "download": "הורדת PDF",
     "openInNewTab": "פתיחה בלשונית חדשה"
+  },
+  "services": {
+    "metaTitle": "שירותים",
+    "eyebrow": "שירותים",
+    "helpWith": "במה אני יכול לעזור",
+    "offerings": "שירותים, והיכן כבר סיפקתי אותם",
+    "delivered": "בוצע",
+    "caseStudyLink": "עבודה",
+    "moduleName": "מודול",
+    "moduleWhat": "מה הוא נותן לעסק",
+    "howIWork": "איך אני עובד",
+    "cicd": "CI/CD ובדיקות",
+    "monitoring": "לוגים וניטור בזמן אמת",
+    "engagements": "דרכים לעבוד יחד",
+    "ctaTitle": "בואו נדבר על מה שאתם צריכים"
   }
 }
