@@ -24,9 +24,9 @@ npm run lint    # ESLint (next core-web-vitals + typescript)
 
 | Variable | Purpose | Default |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Canonical base URL for metadata, hreflang, sitemap, robots | `https://personal-site-mk2.vercel.app` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical base URL for metadata, hreflang, sitemap, robots | `https://koenig.co.il` |
 
-Production sets it to `https://koenig.co.il`.
+Production also sets it explicitly; previews and local builds use the default.
 
 ## Project Structure
 

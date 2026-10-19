@@ -1,5 +1,5 @@
 export const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://personal-site-mk2.vercel.app'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://koenig.co.il'
 
 /**
  * Builds canonical + hreflang alternates for a route.
