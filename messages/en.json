@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "caseStudies": "Case Studies",
+    "services": "Services",
     "mindset": "Mindset",
     "resume": "Resume",
     "contact": "Contact"
@@ -11,7 +12,8 @@
     "getInTouch": "Get in touch",
     "linkedin": "LinkedIn",
     "viewAll": "View all",
-    "flagship": "Flagship"
+    "flagship": "Flagship",
+    "workWithMe": "Work with me"
   },
   "home": {
     "hero": {
@@ -207,5 +209,20 @@
     "title": "Resume",
     "download": "Download PDF",
     "openInNewTab": "Open in new tab"
+  },
+  "services": {
+    "metaTitle": "Services",
+    "eyebrow": "Services",
+    "helpWith": "What I can help you with",
+    "offerings": "Services, and where I've delivered them",
+    "delivered": "Delivered",
+    "caseStudyLink": "Case study",
+    "moduleName": "Module",
+    "moduleWhat": "What it does for the business",
+    "howIWork": "How I work",
+    "cicd": "CI/CD and testing",
+    "monitoring": "Logging and real-time monitoring",
+    "engagements": "Ways we can work together",
+    "ctaTitle": "Let's talk about what you need"
   }
 }
