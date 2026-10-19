@@ -9,15 +9,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const title = 'Case Studies — Avi Koenig'
-  const description =
-    'Selected, anonymized case studies: building and safely evolving production systems — from a factory-wide MES to legacy modernization and real-time platforms.'
+  const t = await getTranslations({ locale, namespace: 'caseStudiesPage' })
+  const title = `${t('title')} — Avi Koenig`
+  const description = t('metaDescription')
   return {
     title,
     description,
     alternates: localeAlternates('/case-studies', locale),
     openGraph: { title, description, type: 'website', siteName: 'Avi Koenig' },
-    twitter: { card: 'summary', title },
+    twitter: { card: 'summary', title, description },
   }
 }
 
