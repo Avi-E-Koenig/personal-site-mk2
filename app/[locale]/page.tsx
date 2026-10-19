@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home' })
-  const title = 'Avi Koenig - Senior Backend-Oriented Full-Stack Developer'
+  const title = `Avi Koenig - ${t('hero.title')}`
   const description = t('hero.tagline')
 
   return {

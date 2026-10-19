@@ -182,6 +182,7 @@
     "eyebrow": "Selected work",
     "title": "Case Studies",
     "intro": "A few representative engagements. All anonymized — described by the type of system and the work, not the client. Each follows the same shape: the situation, what I did, and the outcome.",
+    "metaDescription": "Selected, anonymized case studies: building and safely evolving production systems — from a factory-wide MES to legacy modernization and real-time platforms.",
     "fields": {
       "situation": "Situation",
       "approach": "Approach",
