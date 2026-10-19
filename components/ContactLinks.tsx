@@ -1,6 +1,6 @@
 'use client'
 
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 interface ContactLinksProps {
   variant?: 'footer' | 'page'
@@ -10,16 +10,11 @@ export default function ContactLinks({
   variant = 'page'
 }: ContactLinksProps) {
   const t = useTranslations('contact')
-  // ltr
-  const locale = useLocale()
-  const isLTR = locale === 'en'
 
-  const phoneNumber = isLTR ? '+972546912070' : '0546912070'
-
-
+  const phoneDigits = t('phone').replace(/[\s-]/g, '') // e.g. "+972 54-691-2072" -> "+972546912072"
   const whatsappMessage = encodeURIComponent(t('whatsappMessage'))
-  const whatsappUrl = `https://wa.me/972546912072?text=${whatsappMessage}`
-  const phoneUrl = `tel:${t('phone').replace(/\s|-/g, '')}`
+  const whatsappUrl = `https://wa.me/${phoneDigits.replace('+', '')}?text=${whatsappMessage}`
+  const phoneUrl = `tel:${phoneDigits}`
 
   const linkClasses = variant === 'footer'
     ? 'link text-text-secondary hover:text-text-primary transition-colors text-sm'
@@ -38,7 +33,7 @@ export default function ContactLinks({
     { href: 'https://github.com/Avi-E-Koenig', label: t('githubLabel'), title: 'GitHub profile', external: true },
     { href: whatsappUrl, label: t('whatsappLabel'), title: 'Chat on WhatsApp', external: true },
     { href: `mailto:${t('email')}`, label: `${t('emailLabel')}: ${t('email')}`, title: 'Send email' },
-    { href: phoneUrl, label: `${t('phoneLabel')}: ${phoneNumber}`, title: 'Call phone' },
+    { href: phoneUrl, label: `${t('phoneLabel')}: ${t('phone')}`, title: 'Call phone' },
   ]
 
   return (
