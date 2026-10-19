@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { localizedCaseStudies } from '@/content/case-studies'
+// import { localizedCaseStudies } from '@/content/case-studies'
 import { localeAlternates } from '@/lib/seo'
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/avi-koenig'
@@ -35,7 +35,7 @@ export default async function Home({
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'home' })
   const tc = await getTranslations({ locale, namespace: 'common' })
-  const caseStudies = localizedCaseStudies(locale)
+  // const caseStudies = localizedCaseStudies(locale)
 
   const stats = [
     { value: '8+', label: t('stats.years') },
@@ -96,7 +96,7 @@ export default async function Home({
         </section>
 
         {/* Selected Work — Case Study teasers */}
-        <section className="mt-16">
+        {/* <section className="mt-16">
           <div className="flex items-end justify-between mb-6">
             <div>
               <p className="eyebrow mb-1">{t('selectedWork.eyebrow')}</p>
@@ -140,7 +140,7 @@ export default async function Home({
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Quick snapshot + looking for + how I work */}
         <section className="mt-16 grid gap-5 md:grid-cols-2">
