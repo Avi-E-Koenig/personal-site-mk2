@@ -1,98 +1,51 @@
-# Personal Website - Avi Koenig
+# Avi Koenig — Personal Portfolio (v3)
 
-Personal website built with Next.js, TypeScript, and Tailwind CSS.
+Recruiter-facing bilingual (English / Hebrew) portfolio, live at [koenig.co.il](https://koenig.co.il) on Vercel.
+
+Domain vocabulary (Case Study, Mindset, Anonymized, …) lives in [`CONTEXT.md`](CONTEXT.md); architectural decisions in [`docs/adr/`](docs/adr).
 
 ## Tech Stack
 
-- **Next.js 15** (App Router)
-- **TypeScript**
-- **Tailwind CSS** (with custom design tokens)
-- **next-intl** (cookie-based i18n)
-- **React 19**
+- **Next.js 16** (App Router, Turbopack) + **React 19** + **TypeScript**
+- **next-intl** — `[locale]` path routing: English unprefixed (`/`), Hebrew under `/he`, per-locale SEO (ADR 0002)
+- **Tailwind CSS 3** with custom design tokens; light default + dark toggle via **next-themes**
 
 ## Getting Started
 
-### Install Dependencies
-
 ```bash
 npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm start       # serve the production build
+npm run lint    # ESLint (next core-web-vitals + typescript)
 ```
 
-### Development
+### Environment
 
-```bash
-npm run dev
-```
+| Variable | Purpose | Default |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical base URL for metadata, hreflang, sitemap, robots | `https://personal-site-mk2.vercel.app` |
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build
-
-```bash
-npm run build
-```
-
-### Start Production Server
-
-```bash
-npm start
-```
+Production sets it to `https://koenig.co.il`.
 
 ## Project Structure
 
 ```
 app/
-  layout.tsx              # Root layout
-  page.tsx                # Home page
-  how-i-work/page.tsx     # How I Work page
-  experience/page.tsx     # Experience page
-  resume/page.tsx         # Resume page
-  contact/page.tsx        # Contact page
-  globals.css             # Global styles
-  providers.tsx           # i18n provider
-
-components/
-  Navigation.tsx          # Main navigation
-  LanguageSwitcher.tsx    # Language switcher
-
-lib/
-  i18n/
-    config.ts             # i18n configuration
-  utils/
-    cn.ts                 # Class name utility
-
-messages/
-  en.json                 # English translations
-  he.json                 # Hebrew translations (TODO)
-
-public/
-  resume.pdf              # Resume PDF
+  [locale]/               # Home, case-studies, mindset, resume, contact (+ layout)
+  api/resume/route.ts     # Résumé proxy (Google Doc → PDF, bundled fallback) — ADR 0003
+  robots.ts, sitemap.ts   # Generated SEO files
+  providers.tsx           # Theme provider
+components/               # Navigation, Footer, ContactLinks, Language/Theme switchers
+content/case-studies.ts   # Case Study content (EN + HE)
+i18n/                     # next-intl routing, request config, locale-aware navigation
+lib/seo.ts                # baseUrl + canonical/hreflang helpers
+messages/{en,he}.json     # UI strings (keep keys in parity)
+proxy.ts                  # next-intl locale routing proxy
+public/resume-fallback.pdf
 ```
 
-## Features
+## Notes
 
-- ✅ Next.js App Router
-- ✅ TypeScript
-- ✅ Tailwind CSS with custom design tokens
-- ✅ Cookie-based i18n (English + Hebrew)
-- ✅ RTL support for Hebrew
-- ✅ Responsive design
-- ✅ Accessibility (WCAG AA)
-
-## Documentation
-
-See `ai-context/` folder for:
-- PRD.md - Product Requirements Document
-- WEBSITE-CHARACTERIZATION.md - Design and UX characterization
-- tailwind-tokens.md - Design system tokens
-- content-inventory.md - Content inventory
-- translation-workflow.md - Translation guidelines
-
-## Next Steps
-
-1. Complete Hebrew translations in `messages/he.json`
-2. Add resume PDF to `public/resume.pdf`
-3. Update LinkedIn link in contact page
-4. Test RTL layout
-5. Deploy
-
+- `/resume.pdf` is rewritten to `/api/resume`, which serves the live Google Doc export and falls back to `public/resume-fallback.pdf` if Drive is unreachable.
+- `ai-context/` holds the original PRD and content-gathering material used to build the site.
