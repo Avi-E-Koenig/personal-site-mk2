@@ -1,7 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import { useTheme } from 'next-themes'
+
+const noopSubscribe = () => () => {}
 
 /**
  * Discreet light/dark toggle. Kept deliberately understated (icon-only),
@@ -10,9 +12,8 @@ import { useTheme } from 'next-themes'
  */
 export default function ThemeSwitcher() {
   const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => setMounted(true), [])
+  // false during SSR + hydration, true once running on the client.
+  const mounted = useSyncExternalStore(noopSubscribe, () => true, () => false)
 
   const isDark = mounted && resolvedTheme === 'dark'
 
